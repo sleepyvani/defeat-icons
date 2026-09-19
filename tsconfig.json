@@ -10,19 +10,13 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client"],
-    "baseUrl": ".",
-    "paths": {
-      "defeat-icons-react": ["packages/defeat-icons-react"],
-      "defeat-icons-react/*": ["packages/defeat-icons-react/icons/*"]
-    }
+    "types": ["vite/client"]
   },
   "include": ["src"],
   "exclude": ["dist", "dist-demo", "node_modules"]
 }
-

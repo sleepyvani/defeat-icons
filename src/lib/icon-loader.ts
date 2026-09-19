@@ -2,7 +2,7 @@ import type React from 'react';
 import { CATEGORY_ICON_NAMES } from '../constants/categories.js';
 
 export const iconModules = import.meta.glob<{ default: React.ComponentType<any>; [key: string]: any }>(
-  '../../packages/defeat-icons-react/icons/*.js'
+  '/node_modules/defeat-icons-react/icons/*.js'
 );
 
 export const componentCache = new Map<string, React.ComponentType<any>>();
@@ -11,7 +11,7 @@ export async function loadIcon(name: string): Promise<React.ComponentType<any> |
   if (componentCache.has(name)) {
     return componentCache.get(name)!;
   }
-  const path = `../../packages/defeat-icons-react/icons/${name}.js`;
+  const path = `/node_modules/defeat-icons-react/icons/${name}.js`;
   if (iconModules[path]) {
     try {
       const mod = await iconModules[path]();
@@ -28,7 +28,7 @@ export async function loadIcon(name: string): Promise<React.ComponentType<any> |
 }
 
 Object.values(CATEGORY_ICON_NAMES).forEach((name) => {
-  const path = `../../packages/defeat-icons-react/icons/${name}.js`;
+  const path = `/node_modules/defeat-icons-react/icons/${name}.js`;
   if (iconModules[path]) {
     iconModules[path]().then((mod) => {
       const loaded = mod.default || (mod as any)[name];
