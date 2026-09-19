@@ -773,7 +773,7 @@ import { DefeatIconHeart, DefeatIconAccessibility } from 'defeat-icons-angular';
   \`
 })
 export class AppComponent {}`,
-    lineCount: 16,
+    lineCount: 15,
     renderCode: () => (
       <pre className="pl-3.5 text-zinc-800">
         <span className="text-purple-700 font-bold">import</span>
@@ -871,7 +871,7 @@ export class AppComponent {}`,
     name: 'Elements',
     pkgPath: 'defeat-icons-elements',
     IconComponent: ElementsIcon,
-    snippet: `<script type="module" src="defeat-icons-elements"></script>
+    snippet: `<script type="module" src="https://unpkg.com/defeat-icons-elements/defeat-icon.js"></script>
 
 <div class="flex gap-4">
   <defeat-icon name="Heart" size="24"></defeat-icon>
@@ -887,7 +887,7 @@ export class AppComponent {}`,
         <span className="text-emerald-700 font-semibold">"module"</span>{' '}
         <span className="text-amber-700 font-semibold">src</span>
         <span className="text-zinc-600 font-medium">=</span>
-        <span className="text-emerald-700 font-semibold">"defeat-icons-elements"</span>
+        <span className="text-emerald-700 font-semibold">"https://unpkg.com/defeat-icons-elements/defeat-icon.js"</span>
         <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
         <span className="text-rose-600 font-bold">script</span>
         <span className="text-zinc-600 font-medium">&gt;</span>
@@ -1005,7 +1005,7 @@ app.innerHTML = \`
     name: 'Font',
     pkgPath: 'defeat-icons-font',
     IconComponent: FontIcon,
-    snippet: `<link rel="stylesheet" href="defeat-icons-font/defeat-icons.min.css" />
+    snippet: `<link rel="stylesheet" href="https://unpkg.com/defeat-icons-font/defeat-icons.min.css" />
 
 <div class="flex gap-4">
   <i class="df df-heart text-2xl"></i>
@@ -1021,7 +1021,7 @@ app.innerHTML = \`
         <span className="text-emerald-700 font-semibold">"stylesheet"</span>{' '}
         <span className="text-amber-700 font-semibold">href</span>
         <span className="text-zinc-600 font-medium">=</span>
-        <span className="text-emerald-700 font-semibold">"defeat-icons-font/defeat-icons.min.css"</span>
+        <span className="text-emerald-700 font-semibold">"https://unpkg.com/defeat-icons-font/defeat-icons.min.css"</span>
         <span className="text-zinc-600 font-medium"> /&gt;</span>
         {'\n\n'}
         <span className="text-zinc-600 font-medium">&lt;</span>
