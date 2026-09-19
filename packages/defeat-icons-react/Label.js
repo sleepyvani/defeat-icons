@@ -1,7 +1,0 @@
-import React from 'react';
-import { Icon } from './Icon.js';
-
-const iconNode = [["path",{"opacity":"0.4","d":"M12.25 17H5.75C4.2334 17 3 15.7661 3 14.25V7.0405C3 6.2646 3.3301 5.521 3.9053 5.0009L7.8262 1.454C8.4951 0.848503 9.5044 0.848503 10.1743 1.454L14.0947 5.0009C14.6699 5.5209 15 6.2646 15 7.0405V14.25C15 15.7661 13.7666 17 12.25 17Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M9 8C9.69036 8 10.25 7.44036 10.25 6.75C10.25 6.05964 9.69036 5.5 9 5.5C8.30964 5.5 7.75 6.05964 7.75 6.75C7.75 7.44036 8.30964 8 9 8Z","fill":"currentColor"}]];
-
-export const Label = (props) => React.createElement(Icon, { iconNode, ...props });
-export default Label;

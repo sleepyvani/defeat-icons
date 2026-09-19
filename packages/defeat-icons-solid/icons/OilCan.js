@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"d":"M16.977 7.052C17.297 6.926 17.66 7.034 17.86 7.314C18.06 7.593 18.045 7.972 17.823 8.234L12.922 14.026C12.398 14.645 11.633 15 10.822 15H5.75C4.319 15 3.129 13.898 3 12.5V8.5V7L9.662 7C10.297 7 10.883 7.345 11.192 7.9L11.838 9.063L16.977 7.052Z","fill":"currentColor","fill-opacity":"0.4","data-color":"color-2"}],["path",{"d":"M4.25 4.5H6V5.25C6 5.664 6.336 6 6.75 6C7.164 6 7.5 5.664 7.5 5.25V4.5H9.25C9.664 4.5 10 4.164 10 3.75C10 3.336 9.664 3 9.25 3H4.25C3.836 3 3.5 3.336 3.5 3.75C3.5 4.164 3.836 4.5 4.25 4.5Z","fill":"currentColor"}],["path",{"d":"M3 7H1.75C0.783786 7 0 7.78379 0 8.75V9.75C0 11.2692 1.23079 12.5 2.75 12.5L3 12.5V11H2.75C2.05921 11 1.5 10.4408 1.5 9.75V8.75C1.5 8.61221 1.61221 8.5 1.75 8.5H3V7Z","fill":"currentColor"}]];
+
+export const OilCan = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default OilCan;

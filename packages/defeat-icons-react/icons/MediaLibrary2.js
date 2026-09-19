@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from '../Icon.js';
+
+const iconNode = [["path",{"d":"m13.75,4.5h-6.5c-1.5188,0-2.75,1.2312-2.75,2.75v6.5c0,1.5188,1.2312,2.75,2.75,2.75h6.5c1.5188,0,2.75-1.2312,2.75-2.75v-6.5c0-1.5188-1.2312-2.75-2.75-2.75Z","fill":"currentColor","opacity":".4","strokeWidth":"0","data-color":"color-2"}],["path",{"d":"m4.5,13.75v-6.5c0-1.5166,1.2334-2.75,2.75-2.75h5.8042l-.1544-1.0391c-.2229-1.5-1.6241-2.5388-3.1243-2.3159l-6.4294.9551c-1.5001.2229-2.5389,1.6243-2.316,3.1243l.9552,6.4294c.1935,1.3022,1.2757,2.2542,2.5391,2.3374-.0071-.0806-.0244-.1587-.0244-.2412Z","strokeWidth":"0","fill":"currentColor"}],["path",{"d":"m12.657,9.879l-2.987-2.022c-.498-.337-1.17.02-1.17.621v4.044c0,.601.672.958,1.17.621l2.987-2.022c.439-.297.439-.945,0-1.242Z","strokeWidth":"0","fill":"currentColor"}]];
+
+export const MediaLibrary2 = (props) => React.createElement(Icon, { iconNode, ...props });
+export default MediaLibrary2;

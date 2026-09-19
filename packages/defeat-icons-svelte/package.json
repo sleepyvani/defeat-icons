@@ -1,6 +1,6 @@
 {
   "name": "defeat-icons-svelte",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "3,424 18px duo-fill SVG icon components for Svelte",
   "type": "module",
   "main": "./index.js",
@@ -13,22 +13,34 @@
       "svelte": "./index.js",
       "default": "./index.js"
     },
+    "./icons/*.svelte": {
+      "types": "./icons/*.d.ts",
+      "svelte": "./icons/*.svelte",
+      "default": "./icons/*.svelte"
+    },
+    "./icons/*": {
+      "types": "./icons/*.d.ts",
+      "svelte": "./icons/*.svelte",
+      "default": "./icons/*.svelte"
+    },
     "./*.svelte": {
-      "types": "./*.d.ts",
-      "svelte": "./*.svelte",
-      "default": "./*.svelte"
+      "types": "./icons/*.d.ts",
+      "svelte": "./icons/*.svelte",
+      "default": "./icons/*.svelte"
     },
     "./*": {
-      "types": "./*.d.ts",
-      "svelte": "./*.svelte",
-      "default": "./*.svelte"
+      "types": "./icons/*.d.ts",
+      "svelte": "./icons/*.svelte",
+      "default": "./icons/*.svelte"
     },
     "./package.json": "./package.json"
   },
   "files": [
-    "*.svelte",
-    "*.d.ts",
     "index.js",
+    "index.d.ts",
+    "Icon.svelte",
+    "Icon.d.ts",
+    "icons",
     "README.md"
   ],
   "keywords": [

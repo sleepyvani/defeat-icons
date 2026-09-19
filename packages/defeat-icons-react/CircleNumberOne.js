@@ -1,7 +1,0 @@
-import React from 'react';
-import { Icon } from './Icon.js';
-
-const iconNode = [["circle",{"cx":"9","cy":"9","r":"8","fill":"currentColor","opacity":".4","strokeWidth":"0","data-color":"color-2"}],["path",{"d":"m9.25,13c-.4141,0-.75-.3359-.75-.75v-4.7212c-.3916.248-.8687.4614-1.4336.5698-.4067.0752-.8003-.189-.8779-.5957s.189-.7998.5957-.8779c1.2036-.2305,1.792-1.209,1.8164-1.2505.1724-.2915.5195-.4351.8452-.3457.3262.0889.5542.3828.5542.7212v6.5c0,.4141-.3359.75-.75.75Z","strokeWidth":"0","fill":"currentColor"}]];
-
-export const CircleNumberOne = (props) => React.createElement(Icon, { iconNode, ...props });
-export default CircleNumberOne;

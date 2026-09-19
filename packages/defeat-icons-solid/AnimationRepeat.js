@@ -1,7 +1,0 @@
-import { createComponent, mergeProps } from 'solid-js/web';
-import Icon from './Icon.js';
-
-const iconNode = [["path",{"d":"M6.75 4C5.23079 4 4 5.23079 4 6.75V11.25C4 12.7692 5.23079 14 6.75 14H11.25C12.7692 14 14 12.7692 14 11.25V6.75C14 5.23079 12.7692 4 11.25 4H6.75Z","fill":"currentColor","fill-opacity":"0.4","data-color":"color-2"}],["path",{"d":"M4 7V11.25C4 12.7692 5.23079 14 6.75 14H11V14.25C11 15.7692 9.76921 17 8.25 17H3.75C2.23079 17 1 15.7692 1 14.25V9.75C1 8.23079 2.23079 7 3.75 7H4Z","fill":"currentColor","fill-opacity":"0.2","data-color":"color-2"}],["path",{"d":"M9.75 1C8.23079 1 7 2.23079 7 3.75V8.25C7 9.76921 8.23079 11 9.75 11H14.25C15.7692 11 17 9.76921 17 8.25V3.75C17 2.23079 15.7692 1 14.25 1H9.75Z","fill":"currentColor"}]];
-
-export const AnimationRepeat = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
-export default AnimationRepeat;

@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from '../Icon.js';
+
+const iconNode = [["circle",{"cx":"9","cy":"9","r":"8","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m9.75,8.6895V1.0381c-.2472-.0232-.4968-.0381-.75-.0381s-.5028.0149-.75.0381v7.6514l-5.4092,5.4092c.3197.3857.6749.7407,1.0605,1.0605l4.3486-4.3486v6.1514c.2472.0232.4968.0381.75.0381s.5028-.0149.75-.0381v-6.1514l4.3486,4.3486c.3856-.3198.7408-.6748,1.0605-1.0605l-5.4092-5.4092Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const Peace = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default Peace;

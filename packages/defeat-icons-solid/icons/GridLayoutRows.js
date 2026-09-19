@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"opacity":"0.4","d":"M14.2501 10H3.75012C2.78362 10 2.00012 10.7835 2.00012 11.75V14.25C2.00012 15.2165 2.78362 16 3.75012 16H14.2501C15.2166 16 16.0001 15.2165 16.0001 14.25V11.75C16.0001 10.7835 15.2166 10 14.2501 10Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M14.2501 2H3.75012C2.78362 2 2.00012 2.7835 2.00012 3.75V6.25C2.00012 7.2165 2.78362 8 3.75012 8H14.2501C15.2166 8 16.0001 7.2165 16.0001 6.25V3.75C16.0001 2.7835 15.2166 2 14.2501 2Z","fill":"currentColor"}]];
+
+export const GridLayoutRows = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default GridLayoutRows;

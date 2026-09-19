@@ -1,8 +1,0 @@
-import { h } from 'vue';
-import Icon from './Icon.js';
-
-const iconNode = [["path",{"d":"M15.2501 11.5H2.75009C2.33599 11.5 2.00009 11.1641 2.00009 10.75C2.00009 10.3359 2.33599 10 2.75009 10H15.2501C15.6642 10 16.0001 10.3359 16.0001 10.75C16.0001 11.1641 15.6642 11.5 15.2501 11.5Z","fill":"currentColor"}],["path",{"opacity":"0.4","d":"M12.2501 15H5.75009C5.33599 15 5.00009 14.6641 5.00009 14.25C5.00009 13.8359 5.33599 13.5 5.75009 13.5H12.2501C12.6642 13.5 13.0001 13.8359 13.0001 14.25C13.0001 14.6641 12.6642 15 12.2501 15Z","fill":"currentColor","data-color":"color-2"}],["path",{"opacity":"0.4","d":"M12.2501 8H5.75009C5.33599 8 5.00009 7.6641 5.00009 7.25C5.00009 6.8359 5.33599 6.5 5.75009 6.5H12.2501C12.6642 6.5 13.0001 6.8359 13.0001 7.25C13.0001 7.6641 12.6642 8 12.2501 8Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M15.2501 4.5H2.75009C2.33599 4.5 2.00009 4.1641 2.00009 3.75C2.00009 3.3359 2.33599 3 2.75009 3H15.2501C15.6642 3 16.0001 3.3359 16.0001 3.75C16.0001 4.1641 15.6642 4.5 15.2501 4.5Z","fill":"currentColor"}]];
-
-export const TextAlignCenter2 = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
-TextAlignCenter2.props = ['size', 'width', 'height'];
-export default TextAlignCenter2;

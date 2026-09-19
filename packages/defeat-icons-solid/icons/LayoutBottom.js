@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"opacity":"0.4","d":"M14.2501 2H3.75012C2.23134 2 1.00012 3.23122 1.00012 4.75V13.25C1.00012 14.7688 2.23134 16 3.75012 16H14.2501C15.7689 16 17.0001 14.7688 17.0001 13.25V4.75C17.0001 3.23122 15.7689 2 14.2501 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M13.2501 13H4.75012C4.33602 13 4.00012 12.6641 4.00012 12.25C4.00012 11.8359 4.33602 11.5 4.75012 11.5H13.2501C13.6642 11.5 14.0001 11.8359 14.0001 12.25C14.0001 12.6641 13.6642 13 13.2501 13Z","fill":"currentColor"}]];
+
+export const LayoutBottom = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default LayoutBottom;

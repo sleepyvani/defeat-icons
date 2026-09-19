@@ -1,6 +1,6 @@
 {
   "name": "defeat-icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "18px fill-duo SVG icon components library for React, Vue, Svelte, and Solid",
   "type": "module",
   "main": "./dist/react/index.js",

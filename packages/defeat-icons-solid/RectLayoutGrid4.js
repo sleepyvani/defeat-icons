@@ -1,7 +1,0 @@
-import { createComponent, mergeProps } from 'solid-js/web';
-import Icon from './Icon.js';
-
-const iconNode = [["path",{"opacity":"0.4","d":"M11.0001 2H14.2501C15.7667 2 17.0001 3.2334 17.0001 4.75V13.25C17.0001 14.7666 15.7667 16 14.2501 16H11.0001V2Z","fill":"currentColor","data-color":"color-2"}],["path",{"opacity":"0.2","d":"M3.75009 2H11.0001V16H3.75009C2.23349 16 1.00009 14.7666 1.00009 13.25V4.75C1.00009 3.2334 2.23349 2 3.75009 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M1.00009 8V4.75C1.00009 3.2334 2.23349 2 3.75009 2H14.2501C15.7667 2 17.0001 3.2334 17.0001 4.75V8H1.00009Z","fill":"currentColor"}]];
-
-export const RectLayoutGrid4 = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
-export default RectLayoutGrid4;

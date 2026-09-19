@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"d":"m16.2993,8.5322l-1.3501-2.9995c-.2817-.6274-.9077-1.0327-1.5957-1.0327H4.6465c-.688,0-1.314.4053-1.5957,1.0322l-1.3501,2.9995c-.2446.5439-.1973,1.1675.1265,1.6685s.873.7998,1.4692.7998h11.4072c.5962,0,1.1455-.2988,1.4692-.7998s.3711-1.1245.1265-1.668Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m4.6465,4.5h1.3535v-1.5845l1.6475-1.0293c.3511-.2197.458-.6826.2388-1.0337-.2202-.3511-.6831-.458-1.0337-.2388l-2,1.25c-.2192.1372-.3525.3774-.3525.6362v2.0215c.0496-.0044.0961-.0215.1465-.0215Z","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m12.25,15h-2.5v-4h-1.5v4h-2.5c-.4141,0-.75.3359-.75.75s.3359.75.75.75h6.5c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const Lectern = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default Lectern;

@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"d":"m16.25,12c-.3159,0-.6099-.2007-.7129-.5176-.8745-2.6812-3.3008-4.4824-6.0371-4.4824-2.5879,0-4.814,1.5869-5.8091,4.1411-.1504.3867-.5835.5786-.9712.4263-.3857-.1504-.5767-.585-.4263-.9712,1.2061-3.0957,4.0352-5.0962,7.2065-5.0962,3.3877,0,6.3867,2.2173,7.4629,5.5176.1284.3936-.0864.8169-.4805.9453-.0771.0254-.1553.0371-.2324.0371Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m6.75,12H2.25c-.4141,0-.75-.3359-.75-.75v-4.5c0-.4141.3359-.75.75-.75s.75.3359.75.75v3.75h3.75c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const Undo = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+Undo.props = ['size', 'width', 'height'];
+export default Undo;

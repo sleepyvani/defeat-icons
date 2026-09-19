@@ -15,12 +15,18 @@ const vuePkgDir = path.join(packagesDir, 'defeat-icons-vue');
 const sveltePkgDir = path.join(packagesDir, 'defeat-icons-svelte');
 const solidPkgDir = path.join(packagesDir, 'defeat-icons-solid');
 
+const reactIconsDir = path.join(reactPkgDir, 'icons');
+const vueIconsDir = path.join(vuePkgDir, 'icons');
+const svelteIconsDir = path.join(sveltePkgDir, 'icons');
+const solidIconsDir = path.join(solidPkgDir, 'icons');
+
 const pkgDirs = [reactPkgDir, vuePkgDir, sveltePkgDir, solidPkgDir];
-for (const dir of pkgDirs) {
+const iconDirs = [reactIconsDir, vueIconsDir, svelteIconsDir, solidIconsDir];
+for (const dir of [...pkgDirs, ...iconDirs]) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-const pkgVersion = '1.0.1';
+const pkgVersion = '1.0.2';
 
 function toSvgAttrs(attrs) {
   const map = {
@@ -54,16 +60,24 @@ const reactPackageJson = {
       import: './index.js',
       default: './index.js'
     },
+    './icons/*': {
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
+    },
     './*': {
-      types: './*.d.ts',
-      import: './*.js',
-      default: './*.js'
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
     },
     './package.json': './package.json'
   },
   files: [
-    '*.js',
-    '*.d.ts',
+    'index.js',
+    'index.d.ts',
+    'Icon.js',
+    'Icon.d.ts',
+    'icons',
     'README.md'
   ],
   keywords: [
@@ -108,16 +122,24 @@ const vuePackageJson = {
       import: './index.js',
       default: './index.js'
     },
+    './icons/*': {
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
+    },
     './*': {
-      types: './*.d.ts',
-      import: './*.js',
-      default: './*.js'
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
     },
     './package.json': './package.json'
   },
   files: [
-    '*.js',
-    '*.d.ts',
+    'index.js',
+    'index.d.ts',
+    'Icon.js',
+    'Icon.d.ts',
+    'icons',
     'README.md'
   ],
   keywords: [
@@ -162,22 +184,34 @@ const sveltePackageJson = {
       svelte: './index.js',
       default: './index.js'
     },
+    './icons/*.svelte': {
+      types: './icons/*.d.ts',
+      svelte: './icons/*.svelte',
+      default: './icons/*.svelte'
+    },
+    './icons/*': {
+      types: './icons/*.d.ts',
+      svelte: './icons/*.svelte',
+      default: './icons/*.svelte'
+    },
     './*.svelte': {
-      types: './*.d.ts',
-      svelte: './*.svelte',
-      default: './*.svelte'
+      types: './icons/*.d.ts',
+      svelte: './icons/*.svelte',
+      default: './icons/*.svelte'
     },
     './*': {
-      types: './*.d.ts',
-      svelte: './*.svelte',
-      default: './*.svelte'
+      types: './icons/*.d.ts',
+      svelte: './icons/*.svelte',
+      default: './icons/*.svelte'
     },
     './package.json': './package.json'
   },
   files: [
-    '*.svelte',
-    '*.d.ts',
     'index.js',
+    'index.d.ts',
+    'Icon.svelte',
+    'Icon.d.ts',
+    'icons',
     'README.md'
   ],
   keywords: [
@@ -221,16 +255,24 @@ const solidPackageJson = {
       import: './index.js',
       default: './index.js'
     },
+    './icons/*': {
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
+    },
     './*': {
-      types: './*.d.ts',
-      import: './*.js',
-      default: './*.js'
+      types: './icons/*.d.ts',
+      import: './icons/*.js',
+      default: './icons/*.js'
     },
     './package.json': './package.json'
   },
   files: [
-    '*.js',
-    '*.d.ts',
+    'index.js',
+    'index.d.ts',
+    'Icon.js',
+    'Icon.d.ts',
+    'icons',
     'README.md'
   ],
   keywords: [
@@ -638,48 +680,48 @@ async function run() {
     const standardNodeStr = JSON.stringify(standardNodes);
 
     fs.writeFileSync(
-      path.join(reactPkgDir, name + '.js'),
-      "import React from 'react';\nimport { Icon } from './Icon.js';\n\nconst iconNode = " + reactNodeStr + ";\n\nexport const " + name + " = (props) => React.createElement(Icon, { iconNode, ...props });\nexport default " + name + ";\n"
+      path.join(reactIconsDir, name + '.js'),
+      "import React from 'react';\nimport { Icon } from '../Icon.js';\n\nconst iconNode = " + reactNodeStr + ";\n\nexport const " + name + " = (props) => React.createElement(Icon, { iconNode, ...props });\nexport default " + name + ";\n"
     );
     fs.writeFileSync(
-      path.join(reactPkgDir, name + '.d.ts'),
-      "import React from 'react';\nimport { IconProps } from './Icon.js';\n\nexport declare const " + name + ": React.FC<IconProps>;\nexport default " + name + ";\n"
+      path.join(reactIconsDir, name + '.d.ts'),
+      "import React from 'react';\nimport { IconProps } from '../Icon.js';\n\nexport declare const " + name + ": React.FC<IconProps>;\nexport default " + name + ";\n"
     );
-    reactIndexLines.push("export { " + name + " } from './" + name + ".js';");
-    reactIndexDtsLines.push("export { " + name + " } from './" + name + ".js';");
+    reactIndexLines.push("export { " + name + " } from './icons/" + name + ".js';");
+    reactIndexDtsLines.push("export { " + name + " } from './icons/" + name + ".js';");
 
     fs.writeFileSync(
-      path.join(vuePkgDir, name + '.js'),
-      "import { h } from 'vue';\nimport Icon from './Icon.js';\n\nconst iconNode = " + standardNodeStr + ";\n\nexport const " + name + " = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);\n" + name + ".props = ['size', 'width', 'height'];\nexport default " + name + ";\n"
+      path.join(vueIconsDir, name + '.js'),
+      "import { h } from 'vue';\nimport Icon from '../Icon.js';\n\nconst iconNode = " + standardNodeStr + ";\n\nexport const " + name + " = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);\n" + name + ".props = ['size', 'width', 'height'];\nexport default " + name + ";\n"
     );
     fs.writeFileSync(
-      path.join(vuePkgDir, name + '.d.ts'),
-      "import { DefineComponent } from 'vue';\nimport { IconProps } from './Icon.js';\n\nexport declare const " + name + ": DefineComponent<IconProps>;\nexport default " + name + ";\n"
+      path.join(vueIconsDir, name + '.d.ts'),
+      "import { DefineComponent } from 'vue';\nimport { IconProps } from '../Icon.js';\n\nexport declare const " + name + ": DefineComponent<IconProps>;\nexport default " + name + ";\n"
     );
-    vueIndexLines.push("export { " + name + " } from './" + name + ".js';");
-    vueIndexDtsLines.push("export { " + name + " } from './" + name + ".js';");
+    vueIndexLines.push("export { " + name + " } from './icons/" + name + ".js';");
+    vueIndexDtsLines.push("export { " + name + " } from './icons/" + name + ".js';");
 
     fs.writeFileSync(
-      path.join(sveltePkgDir, name + '.svelte'),
-      "<script>\n  import Icon from './Icon.svelte';\n  const iconNode = " + standardNodeStr + ";\n</script>\n\n<Icon {...$$props} {iconNode}>\n  <slot />\n</Icon>\n"
+      path.join(svelteIconsDir, name + '.svelte'),
+      "<script>\n  import Icon from '../Icon.svelte';\n  const iconNode = " + standardNodeStr + ";\n</script>\n\n<Icon {...$$props} {iconNode}>\n  <slot />\n</Icon>\n"
     );
     fs.writeFileSync(
-      path.join(sveltePkgDir, name + '.d.ts'),
-      "import { SvelteComponent } from 'svelte';\nimport { IconProps } from './Icon.d.ts';\n\nexport default class " + name + " extends SvelteComponent<IconProps> {}\nexport { " + name + " };\n"
+      path.join(svelteIconsDir, name + '.d.ts'),
+      "import { SvelteComponent } from 'svelte';\nimport { IconProps } from '../Icon.d.ts';\n\nexport default class " + name + " extends SvelteComponent<IconProps> {}\nexport { " + name + " };\n"
     );
-    svelteIndexLines.push("export { default as " + name + " } from './" + name + ".svelte';");
-    svelteIndexDtsLines.push("export { default as " + name + " } from './" + name + ".svelte';");
+    svelteIndexLines.push("export { default as " + name + " } from './icons/" + name + ".svelte';");
+    svelteIndexDtsLines.push("export { default as " + name + " } from './icons/" + name + ".svelte';");
 
     fs.writeFileSync(
-      path.join(solidPkgDir, name + '.js'),
-      "import { createComponent, mergeProps } from 'solid-js/web';\nimport Icon from './Icon.js';\n\nconst iconNode = " + standardNodeStr + ";\n\nexport const " + name + " = (props) => createComponent(Icon, mergeProps(props, { iconNode }));\nexport default " + name + ";\n"
+      path.join(solidIconsDir, name + '.js'),
+      "import { createComponent, mergeProps } from 'solid-js/web';\nimport Icon from '../Icon.js';\n\nconst iconNode = " + standardNodeStr + ";\n\nexport const " + name + " = (props) => createComponent(Icon, mergeProps(props, { iconNode }));\nexport default " + name + ";\n"
     );
     fs.writeFileSync(
-      path.join(solidPkgDir, name + '.d.ts'),
-      "import { Component } from 'solid-js';\nimport { IconProps } from './Icon.js';\n\nexport declare const " + name + ": Component<IconProps>;\nexport default " + name + ";\n"
+      path.join(solidIconsDir, name + '.d.ts'),
+      "import { Component } from 'solid-js';\nimport { IconProps } from '../Icon.js';\n\nexport declare const " + name + ": Component<IconProps>;\nexport default " + name + ";\n"
     );
-    solidIndexLines.push("export { " + name + " } from './" + name + ".js';");
-    solidIndexDtsLines.push("export { " + name + " } from './" + name + ".js';");
+    solidIndexLines.push("export { " + name + " } from './icons/" + name + ".js';");
+    solidIndexDtsLines.push("export { " + name + " } from './icons/" + name + ".js';");
   }
 
   fs.writeFileSync(path.join(reactPkgDir, 'index.js'), reactIndexLines.join('\n') + '\n');

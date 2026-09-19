@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"d":"m4.75,14.5h-.75V4.5c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v10h-.75c-.4141,0-.75.3359-.75.75s.3359.75.75.75h3c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m16.25,14.5h-.75V4.5c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v10h-.75c-.4141,0-.75.3359-.75.75s.3359.75.75.75h3c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"3.25","cy":"3.75","r":"1.75","stroke-width":"0","fill":"currentColor"}],["circle",{"cx":"14.75","cy":"3.75","r":"1.75","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m9,8.25c-1.085,0-2.126-.2539-3.0947-.7549-.3682-.1899-.5117-.6426-.3213-1.0107.1885-.3667.6387-.5146,1.0107-.3213,1.5059.7783,3.3047.7783,4.8105,0,.3691-.1934.8213-.0464,1.0107.3213.1904.3682.0469.8208-.3213,1.0107-.9688.501-2.0098.7549-3.0947.7549Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const RopeStanchions = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+RopeStanchions.props = ['size', 'width', 'height'];
+export default RopeStanchions;

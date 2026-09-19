@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from '../Icon.js';
+
+const iconNode = [["path",{"fillRule":"evenodd","clipRule":"evenodd","d":"M2 12.25C2 11.0073 3.00792 10 4.25 10H13.75C14.9921 10 16 11.0073 16 12.25V13.75C16 14.9927 14.9921 16 13.75 16H4.25C3.00792 16 2 14.9927 2 13.75V12.25Z","fill":"currentColor"}],["path",{"fillRule":"evenodd","clipRule":"evenodd","d":"M5 4.25C5 3.00726 6.00792 2 7.25 2H10.75C11.9921 2 13 3.00726 13 4.25V5.75C13 6.99274 11.9921 8 10.75 8H7.25C6.00792 8 5 6.99274 5 5.75V4.25Z","fill":"currentColor","fillOpacity":"0.4","data-color":"color-2"}]];
+
+export const Align3Horizontal = (props) => React.createElement(Icon, { iconNode, ...props });
+export default Align3Horizontal;

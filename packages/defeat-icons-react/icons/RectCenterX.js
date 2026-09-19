@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from '../Icon.js';
+
+const iconNode = [["path",{"opacity":"0.4","d":"M2.75012 2C2.33602 2 2.00012 2.3359 2.00012 2.75V15.25C2.00012 15.6641 2.33602 16 2.75012 16C3.16422 16 3.50012 15.6641 3.50012 15.25V2.75C3.50012 2.3359 3.16422 2 2.75012 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"opacity":"0.4","d":"M15.2501 2C14.836 2 14.5001 2.3359 14.5001 2.75V15.25C14.5001 15.6641 14.836 16 15.2501 16C15.6642 16 16.0001 15.6641 16.0001 15.25V2.75C16.0001 2.3359 15.6642 2 15.2501 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M11.2501 5H6.75012C5.78362 5 5.00012 5.7835 5.00012 6.75V11.25C5.00012 12.2165 5.78362 13 6.75012 13H11.2501C12.2166 13 13.0001 12.2165 13.0001 11.25V6.75C13.0001 5.7835 12.2166 5 11.2501 5Z","fill":"currentColor"}]];
+
+export const RectCenterX = (props) => React.createElement(Icon, { iconNode, ...props });
+export default RectCenterX;

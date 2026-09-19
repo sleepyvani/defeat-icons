@@ -1,7 +1,0 @@
-import React from 'react';
-import { Icon } from './Icon.js';
-
-const iconNode = [["path",{"opacity":"0.4","d":"M16.5 4.75V13.25C16.5 14.77 15.267 16 13.75 16H4.25C2.733 16 1.5 14.77 1.5 13.25V4.75C1.5 3.23 2.733 2 4.25 2H13.75C15.267 2 16.5 3.23 16.5 4.75Z","fill":"currentColor","data-color":"color-2"}],["path",{"fillRule":"evenodd","clipRule":"evenodd","d":"M16.4999 7.25V5.75H9.75V2H8.25V5.75H1.5V7.25H8.25V10.75H1.5V12.25H8.25V16H9.75V12.25H16.4999V10.75H9.75V7.25H16.4999Z","fill":"currentColor"}]];
-
-export const TableRows3Cols2 = (props) => React.createElement(Icon, { iconNode, ...props });
-export default TableRows3Cols2;

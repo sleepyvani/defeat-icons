@@ -1,0 +1,8 @@
+<script>
+  import Icon from '../Icon.svelte';
+  const iconNode = [["path",{"d":"m9,1c-.4141,0-.75.3359-.75.75s.3359.75.75.75c3.584,0,6.5,2.916,6.5,6.5s-2.916,6.5-6.5,6.5c-.4141,0-.75.3359-.75.75s.3359.75.75.75c4.4111,0,8-3.5889,8-8S13.4111,1,9,1Z","stroke-width":"0","fill":"currentColor"}],["circle",{"cx":"3.873","cy":"14.127","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"1.75","cy":"9","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"3.873","cy":"3.873","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"6.226","cy":"15.698","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"2.302","cy":"11.7739","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"2.302","cy":"6.2261","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"6.226","cy":"2.302","r":".75","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m9,13c.4141,0,.75-.3359.75-.75v-4.25c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v4.25c0,.4141.3359.75.75.75Z","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m6.5,12.25v-2c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v2c0,.4141.3359.75.75.75s.75-.3359.75-.75Z","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m13,12.25v-6.5c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v6.5c0,.4141.3359.75.75.75s.75-.3359.75-.75Z","stroke-width":"0","fill":"currentColor"}]];
+</script>
+
+<Icon {...$$props} {iconNode}>
+  <slot />
+</Icon>

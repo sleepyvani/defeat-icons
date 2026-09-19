@@ -1,8 +1,0 @@
-<script>
-  import Icon from './Icon.svelte';
-  const iconNode = [["path",{"opacity":"0.4","d":"M13.2501 2H4.75009C3.23131 2 2.00009 3.23122 2.00009 4.75V13.25C2.00009 14.7688 3.23131 16 4.75009 16H13.2501C14.7689 16 16.0001 14.7688 16.0001 13.25V4.75C16.0001 3.23122 14.7689 2 13.2501 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M9.00009 7.25V2H4.75009C3.23349 2 2.00009 3.2334 2.00009 4.75V9H7.25009C8.21489 9 9.00009 8.2148 9.00009 7.25Z","fill":"currentColor"}]];
-</script>
-
-<Icon {...$$props} {iconNode}>
-  <slot />
-</Icon>

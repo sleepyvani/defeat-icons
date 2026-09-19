@@ -1,7 +1,0 @@
-import React from 'react';
-import { Icon } from './Icon.js';
-
-const iconNode = [["path",{"d":"M12.5 5.5H11.0963L12.184 2.70281L12.1844 2.70181C12.5011 1.88388 11.8998 1 11.019 1H6.84901C6.32578 1 5.8563 1.32701 5.67585 1.81984L3.29298 8.31947C2.99323 9.13488 3.59645 10 4.46602 10H7.99997L12.5 5.5Z","fill":"currentColor","fillOpacity":"0.4","data-color":"color-2"}],["path",{"d":"M14.9065 6.27548L7.08524 14.0968L6.52889 16.044C6.42953 16.3917 6.59252 16.7609 6.91647 16.9218C7.24042 17.0826 7.63302 16.9894 7.85003 16.7L14.7505 7.49943C15.0372 7.11638 15.0638 6.65717 14.9065 6.27548Z","fill":"currentColor","fillOpacity":"0.4","data-color":"color-2"}],["path",{"fillRule":"evenodd","clipRule":"evenodd","d":"M16.5303 1.46967C16.8232 1.76256 16.8232 2.23744 16.5303 2.53033L2.53033 16.5303C2.23744 16.8232 1.76256 16.8232 1.46967 16.5303C1.17678 16.2374 1.17678 15.7626 1.46967 15.4697L15.4697 1.46967C15.7626 1.17678 16.2374 1.17678 16.5303 1.46967Z","fill":"currentColor"}]];
-
-export const BoltLightningSlash = (props) => React.createElement(Icon, { iconNode, ...props });
-export default BoltLightningSlash;

@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from '../Icon.js';
+
+const iconNode = [["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M1 2.75C1 2.33579 1.33579 2 1.75 2H16.25C16.6642 2 17 2.33579 17 2.75C17 3.16421 16.6642 3.5 16.25 3.5H1.75C1.33579 3.5 1 3.16421 1 2.75Z","fill":"currentColor"}],["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M6 6.75C6 5.78349 6.78349 5 7.75 5H10.25C11.2165 5 12 5.78349 12 6.75V14.25C12 15.2165 11.2165 16 10.25 16H7.75C6.78349 16 6 15.2165 6 14.25V6.75Z","fill":"currentColor","fill-opacity":"0.4","data-color":"color-2"}]];
+
+export const Align2Top = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+Align2Top.props = ['size', 'width', 'height'];
+export default Align2Top;
