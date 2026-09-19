@@ -254,7 +254,7 @@ export function Hero({
           </div>
 
           <div className="flex flex-1 min-w-0 flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
-            <div className="flex min-w-0 items-center gap-1 overflow-x-auto border-b border-zinc-200/80 bg-zinc-100/75 p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="grid grid-cols-5 gap-1 border-b border-zinc-200/80 bg-zinc-100/75 p-1.5">
               {FRAMEWORKS.map((fw) => {
                 const active = fw.id === selectedFramework;
                 const FwIcon = fw.IconComponent;
@@ -263,14 +263,14 @@ export function Hero({
                     key={fw.id}
                     type="button"
                     onClick={() => onSelectFramework(fw.id)}
-                    className={`flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold transition-all ${
+                    className={`flex items-center justify-center gap-1.5 rounded-lg px-1 py-1.5 text-xs font-semibold transition-all ${
                       active
                         ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
                         : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
                     }`}
                   >
                     <FwIcon size={14} className="shrink-0" />
-                    <span>{fw.name}</span>
+                    <span className="truncate">{fw.name}</span>
                   </button>
                 );
               })}
