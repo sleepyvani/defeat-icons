@@ -191,8 +191,8 @@ export function Hero({
       </p>
 
       <div className="mt-10 flex flex-col gap-8 sm:mt-14 sm:flex-row sm:gap-10 lg:gap-14">
-        <div className="flex flex-1 flex-col gap-3.5">
-          <div className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
+        <div className="flex flex-1 min-w-0 flex-col gap-3.5">
+          <div className="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
             <div className="flex items-center justify-between border-b border-zinc-200/80 bg-zinc-100/75 px-3.5 py-2">
               <div className="flex items-center gap-2">
                 <div className="flex items-center gap-1.5">
@@ -227,7 +227,7 @@ export function Hero({
             </div>
 
             <div className="flex items-center justify-between gap-3 bg-zinc-50/60 px-4 py-3">
-              <div className="flex items-center gap-2.5 overflow-x-auto font-mono text-xs sm:text-[13px] text-zinc-800">
+              <div className="flex min-w-0 items-center gap-2.5 overflow-x-auto font-mono text-xs sm:text-[13px] text-zinc-800">
                 <span className="select-none font-bold text-zinc-400">$</span>
                 <code className="whitespace-nowrap">{activePm.render(activeFramework.pkgPath)}</code>
               </div>
@@ -253,8 +253,8 @@ export function Hero({
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
-            <div className="flex items-center gap-1 overflow-x-auto border-b border-zinc-200/80 bg-zinc-100/75 p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex flex-1 min-w-0 flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
+            <div className="flex min-w-0 items-center gap-1 overflow-x-auto border-b border-zinc-200/80 bg-zinc-100/75 p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {FRAMEWORKS.map((fw) => {
                 const active = fw.id === selectedFramework;
                 const FwIcon = fw.IconComponent;
@@ -263,7 +263,7 @@ export function Hero({
                     key={fw.id}
                     type="button"
                     onClick={() => onSelectFramework(fw.id)}
-                    className={`flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
+                    className={`flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold transition-all ${
                       active
                         ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
                         : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
@@ -306,9 +306,9 @@ export function Hero({
               </button>
             </div>
 
-            <div className="flex-1 overflow-x-auto p-4 font-mono text-[13px] leading-relaxed bg-zinc-50/30">
+            <div className="flex-1 min-w-0 overflow-x-auto p-4 font-mono text-[13px] leading-relaxed bg-zinc-50/30">
               <div className="flex">
-                <div className="select-none pr-3.5 text-right font-mono text-[13px] text-zinc-400 border-r border-zinc-200/80 flex flex-col">
+                <div className="select-none pr-3.5 text-right font-mono text-[13px] text-zinc-400 border-r border-zinc-200/80 flex flex-col shrink-0">
                   {Array.from({ length: activeFramework.lineCount }).map((_, i) => (
                     <span key={i}>{i + 1}</span>
                   ))}
@@ -319,7 +319,7 @@ export function Hero({
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col justify-center space-y-3.5 text-sm text-zinc-700 sm:text-base">
+        <div className="flex flex-1 min-w-0 flex-col justify-center space-y-3.5 text-sm text-zinc-700 sm:text-base">
           <p className="flex items-center gap-2 text-lg font-bold text-zinc-900 sm:text-xl">
             <Rocket size={20} className="text-zinc-500 shrink-0" />
             Getting Started
