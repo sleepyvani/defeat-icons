@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CATEGORY_ICON_NAMES } from '../constants/categories.js';
-import { componentCache, iconModules } from '../lib/icon-loader.js';
+import { componentCache, loadIcon } from '../lib/icon-loader.js';
 
 export function CategoryIcon({ id, className = 'size-3.5' }: { id: string; className?: string }) {
   const iconName = CATEGORY_ICON_NAMES[id] || 'Grid';
@@ -12,16 +12,11 @@ export function CategoryIcon({ id, className = 'size-3.5' }: { id: string; class
       setComp(() => componentCache.get(iconName)!);
       return;
     }
-    const path = `../../dist/components/${iconName}.js`;
-    if (iconModules[path]) {
-      iconModules[path]().then((mod) => {
-        const loaded = mod.default || (mod as any)[iconName];
-        if (loaded) {
-          componentCache.set(iconName, loaded);
-          setComp(() => loaded);
-        }
-      });
-    }
+    loadIcon(iconName).then((loaded) => {
+      if (loaded) {
+        setComp(() => loaded);
+      }
+    });
   }, [iconName, Comp]);
 
   if (!Comp) {

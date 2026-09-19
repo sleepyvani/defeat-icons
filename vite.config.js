@@ -1,7 +1,11 @@
-import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig, createLogger } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const logger = createLogger();
 const originalWarn = logger.warn.bind(logger);
@@ -21,35 +25,21 @@ logger.warnOnce = (msg, options) => {
   originalWarnOnce(msg, options);
 };
 
-function stripDistSourcemap() {
-  return {
-    name: 'strip-dist-sourcemap',
-    enforce: 'pre',
-    async load(id) {
-      const cleanId = id.split('?')[0];
-      if (cleanId.includes('/dist/components/') && cleanId.endsWith('.js')) {
-        const content = await fs.promises.readFile(cleanId, 'utf-8');
-        return {
-          code: content.replace(/\/\/#\s*sourceMappingURL=.*/g, ''),
-          map: { mappings: '' }
-        };
-      }
-    },
-    transform(code, id) {
-      if (id.includes('/dist/components/')) {
-        return {
-          code: code.replace(/\/\/#\s*sourceMappingURL=.*/g, ''),
-          map: { mappings: '' }
-        };
-      }
-    }
-  };
-}
-
 export default defineConfig({
   customLogger: logger,
+  resolve: {
+    alias: [
+      {
+        find: /^defeat-icons-react$/,
+        replacement: path.resolve(__dirname, 'packages/defeat-icons-react/index.js')
+      },
+      {
+        find: /^defeat-icons-react\/(?:icons\/)?(.*?)(\.js)?$/,
+        replacement: path.resolve(__dirname, 'packages/defeat-icons-react/icons/$1.js')
+      }
+    ]
+  },
   plugins: [
-    stripDistSourcemap(),
     react(),
     tailwindcss(),
   ],

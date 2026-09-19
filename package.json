@@ -109,9 +109,9 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "vue": ">=3.0.0",
+    "solid-js": ">=1.0.0",
     "svelte": ">=3.0.0",
-    "solid-js": ">=1.0.0"
+    "vue": ">=3.0.0"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -131,6 +131,7 @@
     }
   },
   "dependencies": {
+    "defeat-icons-react": "file:packages/defeat-icons-react",
     "motion": "^13.4.0",
     "tslib": "^2.0.0"
   },

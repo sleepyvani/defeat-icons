@@ -15,7 +15,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "defeat-icons-react": ["packages/defeat-icons-react"],
+      "defeat-icons-react/*": ["packages/defeat-icons-react/icons/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["dist", "dist-demo", "node_modules"]

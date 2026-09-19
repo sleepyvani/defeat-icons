@@ -16,12 +16,12 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 
-import { Bell } from '../dist/components/Bell.js';
-import { AlertInfo } from '../dist/components/AlertInfo.js';
-import { Loader } from '../dist/components/Loader.js';
-import { Check } from '../dist/components/Check.js';
-import { AlertWarning } from '../dist/components/AlertWarning.js';
-import { Xmark } from '../dist/components/Xmark.js';
+import Bell from 'defeat-icons-react/Bell';
+import AlertInfo from 'defeat-icons-react/AlertInfo';
+import Loader from 'defeat-icons-react/Loader';
+import Check from 'defeat-icons-react/Check';
+import AlertWarning from 'defeat-icons-react/AlertWarning';
+import Xmark from 'defeat-icons-react/Xmark';
 import { EASE_OUT } from './lib/ease.js';
 
 export type ToastStatus = 'neutral' | 'info' | 'loading' | 'success' | 'error';

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { EASE_OUT, SPRING_PANEL } from '../lib/ease.js';
 import { FRAMEWORKS } from '../constants/frameworks.js';
 import { loadIcon } from '../lib/icon-loader.js';
-import { Box } from '../../dist/components/Box.js';
+import Box from 'defeat-icons-react/Box';
 import type { FrameworkId, PresetTheme } from '../types.js';
 
 interface IconModalProps {
