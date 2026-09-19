@@ -1,7 +1,0 @@
-import React from 'react';
-import { Icon } from '../Icon.js';
-
-const iconNode = [["path",{"d":"m13.75,5h-6c-1.5188,0-2.75,1.2312-2.75,2.75v6c0,1.5188,1.2312,2.75,2.75,2.75h6c1.5188,0,2.75-1.2312,2.75-2.75v-6c0-1.5188-1.2312-2.75-2.75-2.75Z","fill":"currentColor","opacity":".4","strokeWidth":"0","data-color":"color-2"}],["path",{"d":"m4.25,13h.75v-5.25c0-1.5166,1.2334-2.75,2.75-2.75h5.25v-.75c0-1.5166-1.2334-2.75-2.75-2.75h-6c-1.5166,0-2.75,1.2334-2.75,2.75v6c0,1.5166,1.2334,2.75,2.75,2.75Z","strokeWidth":"0","fill":"currentColor"}],["path",{"d":"m13.25,11c.552,0,1-.4477,1-1s-.448-1-1-1-1,.4477-1,1,.448,1,1,1Z","strokeWidth":"0","fill":"currentColor"}],["path",{"d":"m8.25,11c.552,0,1-.4477,1-1s-.448-1-1-1-1,.4477-1,1,.448,1,1,1Z","strokeWidth":"0","fill":"currentColor"}],["path",{"d":"m9.6195,11.8237c.7156.1717,1.4592.1786,2.2344-.0001.3429-.079.6631.1762.6431.5275-.0524.919-.8151,1.6489-1.7471,1.6489-.9221,0-1.6783-.7142-1.7452-1.6193-.0252-.341.2823-.6367.6148-.5569Z","strokeWidth":"0","fill":"currentColor"}]];
-
-export const Profiles = (props) => React.createElement(Icon, { iconNode, ...props });
-export default Profiles;

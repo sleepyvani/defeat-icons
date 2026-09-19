@@ -1,8 +1,0 @@
-import { h } from 'vue';
-import Icon from '../Icon.js';
-
-const iconNode = [["path",{"d":"m1.5,5.25c0-1.5193,1.2313-2.75,2.75-2.75h9.5c1.5187,0,2.75,1.2307,2.75,2.75v8.5c0,1.5193-1.2313,2.75-2.75,2.75H4.25c-1.5187,0-2.75-1.2307-2.75-2.75V5.25Z","fill":"currentColor","fill-rule":"evenodd","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m6.5,1.25c0-.4142-.3358-.75-.75-.75s-.75.3358-.75.75v1.25h-.75c-1.5192,0-2.75,1.2308-2.75,2.75v1.25h15v-1.25c0-1.5192-1.2308-2.75-2.75-2.75h-.75v-1.25c0-.4142-.3358-.75-.75-.75s-.75.3358-.75.75v1.25h-5v-1.25Z","fill-rule":"evenodd","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m9,8c.4142,0,.75.3358.75.75v2.25c0,.4142-.3358.75-.75.75s-.75-.3358-.75-.75v-2.25c0-.4142.3358-.75.75-.75Z","fill-rule":"evenodd","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m9,15c.552,0,1-.448,1-1s-.448-1-1-1-1,.448-1,1,.448,1,1,1Z","stroke-width":"0","fill":"currentColor"}]];
-
-export const CalendarAlert2 = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
-CalendarAlert2.props = ['size', 'width', 'height'];
-export default CalendarAlert2;

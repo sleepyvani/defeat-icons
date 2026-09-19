@@ -1,7 +1,0 @@
-import { createComponent, mergeProps } from 'solid-js/web';
-import Icon from '../Icon.js';
-
-const iconNode = [["path",{"opacity":"0.4","d":"M1 9C1 13.411 4.589 17 9 17C13.411 17 17 13.411 17 9C17 4.589 13.411 1 9 1C4.589 1 1 4.589 1 9Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M11.022 10.5H6.97798C6.37698 10.5 6.01998 9.82804 6.35698 9.33004L8.37898 6.34304C8.67598 5.90404 9.32399 5.90404 9.62099 6.34304L11.643 9.33004C11.98 9.82804 11.623 10.5 11.022 10.5Z","fill":"currentColor"}]];
-
-export const CircleCaretUp = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
-export default CircleCaretUp;

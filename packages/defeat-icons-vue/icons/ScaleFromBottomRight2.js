@@ -1,8 +1,0 @@
-import { h } from 'vue';
-import Icon from '../Icon.js';
-
-const iconNode = [["path",{"opacity":"0.4","d":"M13.2501 2H4.75012C3.23134 2 2.00012 3.23122 2.00012 4.75V13.25C2.00012 14.7688 3.23134 16 4.75012 16H13.2501C14.7689 16 16.0001 14.7688 16.0001 13.25V4.75C16.0001 3.23122 14.7689 2 13.2501 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M13.2501 9H11.7501C10.2313 9 9.00012 10.2312 9.00012 11.75V13.25C9.00012 14.7688 10.2313 16 11.7501 16H13.2501C14.7689 16 16.0001 14.7688 16.0001 13.25V11.75C16.0001 10.2312 14.7689 9 13.2501 9Z","fill":"currentColor"}]];
-
-export const ScaleFromBottomRight2 = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
-ScaleFromBottomRight2.props = ['size', 'width', 'height'];
-export default ScaleFromBottomRight2;

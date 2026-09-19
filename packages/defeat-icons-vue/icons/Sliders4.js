@@ -1,8 +1,0 @@
-import { h } from 'vue';
-import Icon from '../Icon.js';
-
-const iconNode = [["path",{"d":"m15.75,9.75H2.25c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h13.5c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m15.75,4.5H3.25c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h12.5c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m14.75,15H2.25c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h12.5c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["circle",{"cx":"9","cy":"9","r":"2.25","stroke-width":"0","fill":"currentColor"}],["circle",{"cx":"3.75","cy":"3.75","r":"2.25","stroke-width":"0","fill":"currentColor"}],["circle",{"cx":"14.25","cy":"14.25","r":"2.25","stroke-width":"0","fill":"currentColor"}]];
-
-export const Sliders4 = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
-Sliders4.props = ['size', 'width', 'height'];
-export default Sliders4;
