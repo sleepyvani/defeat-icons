@@ -113,7 +113,7 @@ export function IconModal({
             </div>
 
             <div className="mt-5 space-y-3">
-              <div className="grid grid-cols-4 gap-1 rounded-lg bg-zinc-200/70 p-1 sm:grid-cols-7">
+              <div className="grid grid-cols-5 gap-1 rounded-lg bg-zinc-200/70 p-1">
                 {FRAMEWORKS.map((fw) => {
                   const active = fw.id === selectedFramework;
                   const FwIcon = fw.IconComponent;
@@ -122,7 +122,7 @@ export function IconModal({
                       key={fw.id}
                       type="button"
                       onClick={() => onSelectFramework(fw.id)}
-                      className={`flex items-center justify-center gap-1 rounded-md px-1.5 py-1 text-xs font-semibold transition-all ${
+                      className={`flex items-center justify-center gap-1 rounded-md px-1 py-1 text-[11px] font-semibold transition-all sm:text-xs ${
                         active
                           ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
                           : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
@@ -139,19 +139,25 @@ export function IconModal({
                 <div className="flex items-center justify-between text-xs font-semibold text-zinc-800">
                   <span className="flex items-center gap-1.5">
                     <Box size={14} className="text-zinc-700 shrink-0" />
-                    {activeFramework.name} Named Import:
+                    {activeFramework.id === 'elements' || activeFramework.id === 'font'
+                      ? `${activeFramework.name} Package Import:`
+                      : `${activeFramework.name} Named Import:`}
                   </span>
                   <button
                     type="button"
                     onClick={() => {
-                      const importName =
-                        activeFramework.id === 'angular'
-                          ? `DefeatIcon${selectedIcon}`
-                          : selectedIcon;
+                      let importCode = `import { ${selectedIcon} } from '${activeFramework.pkgPath}';`;
+                      if (activeFramework.id === 'angular') {
+                        importCode = `import { DefeatIcon${selectedIcon} } from 'defeat-icons-angular';`;
+                      } else if (activeFramework.id === 'elements') {
+                        importCode = `import 'defeat-icons-elements';`;
+                      } else if (activeFramework.id === 'font') {
+                        importCode = `import 'defeat-icons-font/defeat-icons.css';`;
+                      }
                       onCopy(
-                        `import { ${importName} } from '${activeFramework.pkgPath}';`,
-                        'Copied named import',
-                        `import { ${importName} } from '${activeFramework.pkgPath}'`
+                        importCode,
+                        'Copied import statement',
+                        importCode
                       );
                     }}
                     className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
@@ -160,19 +166,33 @@ export function IconModal({
                   </button>
                 </div>
                 <div className="mt-1.5 rounded-lg border border-zinc-200 bg-zinc-50 p-2.5 font-mono text-xs text-zinc-900">
-                  <code>
-                    <span className="text-purple-700 font-bold">import</span>
-                    <span className="text-zinc-600 font-medium"> {'{ '}</span>
-                    <span className="text-blue-700 font-bold">
-                      {activeFramework.id === 'angular'
-                        ? `DefeatIcon${selectedIcon}`
-                        : selectedIcon}
-                    </span>
-                    <span className="text-zinc-600 font-medium">{' }'} </span>
-                    <span className="text-purple-700 font-bold">from</span>
-                    <span className="text-emerald-700 font-semibold"> '{activeFramework.pkgPath}'</span>
-                    <span className="text-zinc-600 font-medium">;</span>
-                  </code>
+                  {activeFramework.id === 'elements' ? (
+                    <code>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-elements'</span>
+                      <span className="text-zinc-600 font-medium">;</span>
+                    </code>
+                  ) : activeFramework.id === 'font' ? (
+                    <code>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-font/defeat-icons.css'</span>
+                      <span className="text-zinc-600 font-medium">;</span>
+                    </code>
+                  ) : (
+                    <code>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-zinc-600 font-medium"> {'{ '}</span>
+                      <span className="text-blue-700 font-bold">
+                        {activeFramework.id === 'angular'
+                          ? `DefeatIcon${selectedIcon}`
+                          : selectedIcon}
+                      </span>
+                      <span className="text-zinc-600 font-medium">{' }'} </span>
+                      <span className="text-purple-700 font-bold">from</span>
+                      <span className="text-emerald-700 font-semibold"> '{activeFramework.pkgPath}'</span>
+                      <span className="text-zinc-600 font-medium">;</span>
+                    </code>
+                  )}
                 </div>
               </div>
 
@@ -180,25 +200,34 @@ export function IconModal({
                 <div className="flex items-center justify-between text-xs font-semibold text-zinc-800">
                   <span className="flex items-center gap-1.5">
                     <activeFramework.IconComponent size={14} className="text-zinc-700 shrink-0" />
-                    {activeFramework.name} Component Usage:
+                    {activeFramework.name} Usage:
                   </span>
                   <button
                     type="button"
                     onClick={() => {
-                      const isAngular = activeFramework.id === 'angular';
-                      const angularTag = selectedIcon
-                        ? 'df-icon-' +
-                          selectedIcon
+                      const kebab = selectedIcon
+                        ? selectedIcon
                             .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
                             .toLowerCase()
                         : '';
-                      const isClass = activeFramework.id !== 'react';
-                      const attr = isClass ? 'class' : 'className';
-                      const usageCode = isAngular
-                        ? `<${angularTag} class="size-6"></${angularTag}>`
-                        : selectedTheme.colorClass
-                        ? `<${selectedIcon} ${attr}="size-6 ${selectedTheme.colorClass}" />`
-                        : `<${selectedIcon} ${attr}="size-6" />`;
+                      let usageCode = `<${selectedIcon} class="size-6" />`;
+                      if (activeFramework.id === 'react') {
+                        usageCode = selectedTheme.colorClass
+                          ? `<${selectedIcon} className="size-6 ${selectedTheme.colorClass}" />`
+                          : `<${selectedIcon} className="size-6" />`;
+                      } else if (activeFramework.id === 'angular') {
+                        usageCode = `<df-icon-${kebab} class="size-6"></df-icon-${kebab}>`;
+                      } else if (activeFramework.id === 'elements') {
+                        usageCode = `<defeat-icon name="${selectedIcon}" size="24"></defeat-icon>`;
+                      } else if (activeFramework.id === 'svg') {
+                        usageCode = `<img src="defeat-icons-svg/${selectedIcon}.svg" alt="${selectedIcon}" class="size-6" />`;
+                      } else if (activeFramework.id === 'font') {
+                        usageCode = `<i class="df df-${kebab}"></i>`;
+                      } else {
+                        usageCode = selectedTheme.colorClass
+                          ? `<${selectedIcon} class="size-6 ${selectedTheme.colorClass}" />`
+                          : `<${selectedIcon} class="size-6" />`;
+                      }
                       onCopy(usageCode, `${activeFramework.name} snippet copied`, usageCode);
                     }}
                     className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
@@ -230,6 +259,53 @@ export function IconModal({
                               .toLowerCase()
                           : ''}
                       </span>
+                      <span className="text-zinc-600 font-medium">&gt;</span>
+                    </code>
+                  ) : activeFramework.id === 'elements' ? (
+                    <code>
+                      <span className="text-zinc-600 font-medium">&lt;</span>
+                      <span className="text-blue-700 font-bold">defeat-icon</span>{' '}
+                      <span className="text-amber-700 font-semibold">name</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"{selectedIcon}"</span>{' '}
+                      <span className="text-amber-700 font-semibold">size</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"24"</span>
+                      <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+                      <span className="text-blue-700 font-bold">defeat-icon</span>
+                      <span className="text-zinc-600 font-medium">&gt;</span>
+                    </code>
+                  ) : activeFramework.id === 'svg' ? (
+                    <code>
+                      <span className="text-zinc-600 font-medium">&lt;</span>
+                      <span className="text-rose-600 font-bold">img</span>{' '}
+                      <span className="text-amber-700 font-semibold">src</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"defeat-icons-svg/{selectedIcon}.svg"</span>{' '}
+                      <span className="text-amber-700 font-semibold">alt</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"{selectedIcon}"</span>{' '}
+                      <span className="text-amber-700 font-semibold">class</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"size-6"</span>
+                      <span className="text-zinc-600 font-medium"> /&gt;</span>
+                    </code>
+                  ) : activeFramework.id === 'font' ? (
+                    <code>
+                      <span className="text-zinc-600 font-medium">&lt;</span>
+                      <span className="text-blue-700 font-bold">i</span>{' '}
+                      <span className="text-amber-700 font-semibold">class</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">
+                        "df df-
+                        {selectedIcon
+                          ? selectedIcon
+                              .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+                              .toLowerCase()
+                          : ''}"
+                      </span>
+                      <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+                      <span className="text-blue-700 font-bold">i</span>
                       <span className="text-zinc-600 font-medium">&gt;</span>
                     </code>
                   ) : (

@@ -168,6 +168,73 @@ export function AngularIcon({ size = 16, className = '' }: { size?: number | str
   );
 }
 
+export function ElementsIcon({ size = 16, className = '' }: { size?: number | string; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 256 256"
+      className={className}
+    >
+      <defs>
+        <linearGradient x1="61.1" y1="32" y2="32" id="SVGA" x2="159" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#2a3b8f" offset="0%" />
+          <stop stopColor="#29abe2" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="159" y1="99.6" x2="61" y2="99.6" id="SVGB" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#b4d44e" offset="0%" />
+          <stop stopColor="#e7f716" offset="100%" />
+        </linearGradient>
+      </defs>
+      <g transform="matrix(1.598003 0 0 1.598003 -.639201 22.342072)" fillRule="evenodd">
+        <path d="M160.6 65.9l-17.4 29.3-24.4-29.7 24.4-28.9z" fill="#166da5" />
+        <path d="M141.3 100.2l-26.5-31.7-15.9 26.6 24.7 36.1z" fill="#8fdb69" />
+        <path d="M141 31.4l-26.2 31.8-15.9-26.6L123.6.9z" fill="#166da5" />
+        <path d="M61.1 31.4H141L123.4.7H78.7zm53.7 31.9H159l-15.9-26.8H98.8" opacity=".95" fill="url(#SVGA)" />
+        <path d="M141.3 100.3H61l17.6 30.5h45zm-26.5-31.9H159l-15.9 26.8H98.8" opacity=".95" fill="url(#SVGB)" />
+        <path d="M78.6 130.8L41 65.8 79.1.8H37.9L.4 65.8l37.5 65z" fill="#010101" />
+      </g>
+    </svg>
+  );
+}
+
+export function SvgIcon({ size = 16, className = '' }: { size?: number | string; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className={className}
+      fill="#ffb13b"
+    >
+      <path d="M12 0c-1.497 0-2.749.965-3.248 2.17a3.45 3.45 0 00-.238 1.416 3.459 3.459 0 00-1.168-.834 3.508 3.508 0 00-1.463-.256 3.513 3.513 0 00-2.367 1.02c-1.06 1.058-1.263 2.625-.764 3.83.179.432.47.82.82 1.154a3.49 3.49 0 00-1.402.252C.965 9.251 0 10.502 0 12c0 1.497.965 2.749 2.17 3.248.437.181.924.25 1.414.236-.357.338-.65.732-.832 1.17-.499 1.205-.295 2.772.764 3.83 1.058 1.06 2.625 1.263 3.83.764.437-.181.83-.476 1.168-.832-.014.49.057.977.238 1.414C9.251 23.035 10.502 24 12 24c1.497 0 2.749-.965 3.248-2.17a3.45 3.45 0 00.238-1.416c.338.356.73.653 1.168.834 1.205.499 2.772.295 3.83-.764 1.06-1.058 1.263-2.625.764-3.83a3.459 3.459 0 00-.834-1.168 3.45 3.45 0 001.416-.238C23.035 14.749 24 13.498 24 12c0-1.497-.965-2.749-2.17-3.248a3.455 3.455 0 00-1.414-.236c.357-.338.65-.732.832-1.17.499-1.205.295-2.772-.764-3.83a3.513 3.513 0 00-2.367-1.02 3.508 3.508 0 00-1.463.256c-.437.181-.83.475-1.168.832a3.45 3.45 0 00-.238-1.414C14.749.965 13.498 0 12 0zm-.041 1.613a1.902 1.902 0 011.387 3.246v3.893L16.098 6A1.902 1.902 0 1118 7.902l-2.752 2.752h3.893a1.902 1.902 0 110 2.692h-3.893L18 16.098A1.902 1.902 0 1116.098 18l-2.752-2.752v3.893a1.902 1.902 0 11-2.692 0v-3.893L7.902 18A1.902 1.902 0 116 16.098l2.752-2.752H4.859a1.902 1.902 0 110-2.692h3.893L6 7.902A1.902 1.902 0 117.902 6l2.752 2.752V4.859a1.902 1.902 0 011.305-3.246z" />
+    </svg>
+  );
+}
+
+export function FontIcon({ size = 16, className = '' }: { size?: number | string; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <polyline points="4 7 4 4 20 4 20 7" />
+      <line x1="9" x2="15" y1="20" y2="20" />
+      <line x1="12" x2="12" y1="4" y2="20" />
+    </svg>
+  );
+}
+
 export function NpmIcon({ size = 16, className = '' }: { size?: number | string; className?: string }) {
   return (
     <svg
@@ -796,6 +863,197 @@ export class AppComponent {}`,
         <span className="text-purple-700 font-bold">class</span>{' '}
         <span className="text-blue-700 font-bold">AppComponent</span>{' '}
         <span className="text-zinc-600 font-medium">{'{}'}</span>
+      </pre>
+    ),
+  },
+  {
+    id: 'elements',
+    name: 'Elements',
+    pkgPath: 'defeat-icons-elements',
+    IconComponent: ElementsIcon,
+    snippet: `<script type="module" src="defeat-icons-elements"></script>
+
+<div class="flex gap-4">
+  <defeat-icon name="Heart" size="24"></defeat-icon>
+  <defeat-icon name="Accessibility" size="24"></defeat-icon>
+</div>`,
+    lineCount: 6,
+    renderCode: () => (
+      <pre className="pl-3.5 text-zinc-800">
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-rose-600 font-bold">script</span>{' '}
+        <span className="text-amber-700 font-semibold">type</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"module"</span>{' '}
+        <span className="text-amber-700 font-semibold">src</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"defeat-icons-elements"</span>
+        <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+        <span className="text-rose-600 font-bold">script</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n\n'}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-rose-600 font-bold">div</span>{' '}
+        <span className="text-amber-700 font-semibold">class</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"flex gap-4"</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-blue-700 font-bold">defeat-icon</span>{' '}
+        <span className="text-amber-700 font-semibold">name</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"Heart"</span>{' '}
+        <span className="text-amber-700 font-semibold">size</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"24"</span>
+        <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+        <span className="text-blue-700 font-bold">defeat-icon</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-blue-700 font-bold">defeat-icon</span>{' '}
+        <span className="text-amber-700 font-semibold">name</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"Accessibility"</span>{' '}
+        <span className="text-amber-700 font-semibold">size</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"24"</span>
+        <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+        <span className="text-blue-700 font-bold">defeat-icon</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        <span className="text-zinc-600 font-medium">&lt;/</span>
+        <span className="text-rose-600 font-bold">div</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+      </pre>
+    ),
+  },
+  {
+    id: 'svg',
+    name: 'SVG',
+    pkgPath: 'defeat-icons-svg',
+    IconComponent: SvgIcon,
+    snippet: `import { Heart, Accessibility } from 'defeat-icons-svg';
+
+const app = document.querySelector('#app');
+app.innerHTML = \`
+  <div class="flex gap-4">
+    \${Heart}
+    \${Accessibility}
+  </div>
+\`;`,
+    lineCount: 10,
+    renderCode: () => (
+      <pre className="pl-3.5 text-zinc-800">
+        <span className="text-purple-700 font-bold">import</span>
+        <span className="text-zinc-600 font-medium"> {'{ '}</span>
+        <span className="text-blue-700 font-bold">Heart</span>
+        <span className="text-zinc-600 font-medium">, </span>
+        <span className="text-blue-700 font-bold">Accessibility</span>
+        <span className="text-zinc-600 font-medium">{' }'} </span>
+        <span className="text-purple-700 font-bold">from</span>
+        <span className="text-emerald-700 font-semibold"> 'defeat-icons-svg'</span>
+        <span className="text-zinc-600 font-medium">;</span>
+        {'\n\n'}
+        <span className="text-purple-700 font-bold">const</span>{' '}
+        <span className="text-zinc-900 font-semibold">app</span>{' '}
+        <span className="text-zinc-600 font-medium">=</span>{' '}
+        <span className="text-blue-700 font-bold">document</span>
+        <span className="text-zinc-600 font-medium">.</span>
+        <span className="text-amber-700 font-semibold">querySelector</span>
+        <span className="text-zinc-600 font-medium">(</span>
+        <span className="text-emerald-700 font-semibold">'#app'</span>
+        <span className="text-zinc-600 font-medium">);</span>
+        {'\n'}
+        <span className="text-zinc-900 font-semibold">app</span>
+        <span className="text-zinc-600 font-medium">.</span>
+        <span className="text-zinc-900 font-semibold">innerHTML</span>{' '}
+        <span className="text-zinc-600 font-medium">= `</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-rose-600 font-bold">div</span>{' '}
+        <span className="text-amber-700 font-semibold">class</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"flex gap-4"</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        {'    '}
+        <span className="text-zinc-600 font-medium">${'{'}</span>
+        <span className="text-blue-700 font-bold">Heart</span>
+        <span className="text-zinc-600 font-medium">{'}'}</span>
+        {'\n'}
+        {'    '}
+        <span className="text-zinc-600 font-medium">${'{'}</span>
+        <span className="text-blue-700 font-bold">Accessibility</span>
+        <span className="text-zinc-600 font-medium">{'}'}</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;/</span>
+        <span className="text-rose-600 font-bold">div</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        <span className="text-zinc-600 font-medium">`;</span>
+      </pre>
+    ),
+  },
+  {
+    id: 'font',
+    name: 'Font',
+    pkgPath: 'defeat-icons-font',
+    IconComponent: FontIcon,
+    snippet: `<link rel="stylesheet" href="defeat-icons-font/defeat-icons.min.css" />
+
+<div class="flex gap-4">
+  <i class="df df-heart text-2xl"></i>
+  <i class="df df-accessibility text-2xl"></i>
+</div>`,
+    lineCount: 6,
+    renderCode: () => (
+      <pre className="pl-3.5 text-zinc-800">
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-rose-600 font-bold">link</span>{' '}
+        <span className="text-amber-700 font-semibold">rel</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"stylesheet"</span>{' '}
+        <span className="text-amber-700 font-semibold">href</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"defeat-icons-font/defeat-icons.min.css"</span>
+        <span className="text-zinc-600 font-medium"> /&gt;</span>
+        {'\n\n'}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-rose-600 font-bold">div</span>{' '}
+        <span className="text-amber-700 font-semibold">class</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"flex gap-4"</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-blue-700 font-bold">i</span>{' '}
+        <span className="text-amber-700 font-semibold">class</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"df df-heart text-2xl"</span>
+        <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+        <span className="text-blue-700 font-bold">i</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        {'  '}
+        <span className="text-zinc-600 font-medium">&lt;</span>
+        <span className="text-blue-700 font-bold">i</span>{' '}
+        <span className="text-amber-700 font-semibold">class</span>
+        <span className="text-zinc-600 font-medium">=</span>
+        <span className="text-emerald-700 font-semibold">"df df-accessibility text-2xl"</span>
+        <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+        <span className="text-blue-700 font-bold">i</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
+        {'\n'}
+        <span className="text-zinc-600 font-medium">&lt;/</span>
+        <span className="text-rose-600 font-bold">div</span>
+        <span className="text-zinc-600 font-medium">&gt;</span>
       </pre>
     ),
   },
