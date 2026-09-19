@@ -161,7 +161,7 @@ export function Hero({
             )}
           </AnimatePresence>
         </span>
-        {', ready to use instantly in your React apps!'}
+        {', ready to use across 10 modern frameworks and web formats!'}
       </h2>
 
       <p className="mx-auto mt-3.5 max-w-2xl text-center text-xs leading-relaxed text-zinc-500 sm:text-sm">
@@ -253,7 +253,7 @@ export function Hero({
                 onCopy(
                   activeFramework.snippet,
                   `${activeFramework.name} code copied`,
-                  `${activeFramework.name} component example ready to paste`
+                  `${activeFramework.name} code example ready to paste`
                 )
               }
               className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
@@ -283,21 +283,48 @@ export function Hero({
             <li className="flex items-center gap-2.5">
               <Code size={18} className="text-zinc-500 shrink-0" />
               <span>
-                <strong>Multi-framework imports:</strong>{' '}
+                <strong>
+                  {activeFramework.id === 'elements' || activeFramework.id === 'font'
+                    ? 'Package import:'
+                    : 'Multi-framework imports:'}
+                </strong>{' '}
                 <code className="rounded border border-zinc-200 bg-zinc-100/90 px-1.5 py-0.5 font-mono text-xs">
-                  <span className="text-purple-700 font-bold">import</span>
-                  <span className="text-zinc-600 font-medium"> {'{ '}</span>
-                  <span className="text-blue-700 font-bold">Heart</span>
-                  <span className="text-zinc-600 font-medium">{' }'} </span>
-                  <span className="text-purple-700 font-bold">from</span>
-                  <span className="text-emerald-700 font-semibold"> '{activeFramework.pkgPath}'</span>
+                  {activeFramework.id === 'elements' ? (
+                    <>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-elements'</span>
+                    </>
+                  ) : activeFramework.id === 'font' ? (
+                    <>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-font/defeat-icons.css'</span>
+                    </>
+                  ) : activeFramework.id === 'angular' ? (
+                    <>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-zinc-600 font-medium"> {'{ '}</span>
+                      <span className="text-blue-700 font-bold">DefeatIconHeart</span>
+                      <span className="text-zinc-600 font-medium">{' }'} </span>
+                      <span className="text-purple-700 font-bold">from</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-angular'</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-zinc-600 font-medium"> {'{ '}</span>
+                      <span className="text-blue-700 font-bold">Heart</span>
+                      <span className="text-zinc-600 font-medium">{' }'} </span>
+                      <span className="text-purple-700 font-bold">from</span>
+                      <span className="text-emerald-700 font-semibold"> '{activeFramework.pkgPath}'</span>
+                    </>
+                  )}
                 </code>.
               </span>
             </li>
             <li className="flex items-center gap-2.5">
               <Palette size={18} className="text-zinc-500 shrink-0" />
               <span>
-                <strong>Natural default colors:</strong> inherits <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs">currentColor</code> automatically, customizable via <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs">className</code>.
+                <strong>Natural default colors:</strong> inherits <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs">currentColor</code> automatically, customizable via <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs">{activeFramework.id === 'react' ? 'className' : 'class'}</code>.
               </span>
             </li>
             <li className="flex items-center gap-2.5">
@@ -309,13 +336,13 @@ export function Hero({
             <li className="flex items-center gap-2.5">
               <BookOpen size={18} className="text-zinc-500 shrink-0" />
               <span>
-                <strong>Complete TypeScript support:</strong> full IntelliSense for all 3,424 icons when typing <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-xs">import {'{ ... }'}</code>.
+                <strong>Complete TypeScript support:</strong> full type declarations and IntelliSense across all 3,424 icons.
               </span>
             </li>
             <li className="flex items-center gap-2.5">
               <Box size={18} className="text-zinc-500 shrink-0" />
               <span>
-                <strong>100% Tree-shakable:</strong> bundlers (Vite, Webpack, Rollup) automatically drop unused icons.
+                <strong>100% Tree-shakable & modular:</strong> bundlers automatically drop unused icons with zero runtime overhead.
               </span>
             </li>
             <li className="flex items-center gap-2.5">

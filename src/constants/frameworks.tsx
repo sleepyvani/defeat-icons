@@ -945,7 +945,7 @@ app.innerHTML = \`
     \${Accessibility}
   </div>
 \`;`,
-    lineCount: 10,
+    lineCount: 9,
     renderCode: () => (
       <pre className="pl-3.5 text-zinc-800">
         <span className="text-purple-700 font-bold">import</span>
