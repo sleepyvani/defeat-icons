@@ -2,6 +2,10 @@
 
 3,424 18px duo-fill SVG icon components for SolidJS with TypeScript support and tree-shaking.
 
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
+
 ## Installation
 
 ```bash

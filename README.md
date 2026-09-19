@@ -4,6 +4,10 @@
 
 Based on the icon design from Nucleo (https://nucleoapp.com). For commercial usage and to support the original creators, consider purchasing an official license directly from Nucleo.
 
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
+
 ---
 
 ## Packages

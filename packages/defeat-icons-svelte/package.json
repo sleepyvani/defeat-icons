@@ -40,7 +40,15 @@
     "defeat-icons"
   ],
   "author": "vanixjnk",
-  "homepage": "https://nucleoapp.com",
+  "homepage": "https://defeat-icons.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyvani/defeat-icons.git",
+    "directory": "packages/defeat-icons-svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepyvani/defeat-icons/issues"
+  },
   "sideEffects": false,
   "peerDependencies": {
     "svelte": ">=3.0.0"

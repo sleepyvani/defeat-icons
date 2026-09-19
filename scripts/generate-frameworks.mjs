@@ -73,7 +73,15 @@ const reactPackageJson = {
     'defeat-icons'
   ],
   author: 'vanixjnk',
-  homepage: 'https://nucleoapp.com',
+  homepage: 'https://defeat-icons.vercel.app/',
+  repository: {
+    type: 'git',
+    url: 'git+https://github.com/sleepyvani/defeat-icons.git',
+    directory: 'packages/defeat-icons-react'
+  },
+  bugs: {
+    url: 'https://github.com/sleepyvani/defeat-icons/issues'
+  },
   sideEffects: false,
   peerDependencies: {
     react: '>=16.8.0',
@@ -119,7 +127,15 @@ const vuePackageJson = {
     'defeat-icons'
   ],
   author: 'vanixjnk',
-  homepage: 'https://nucleoapp.com',
+  homepage: 'https://defeat-icons.vercel.app/',
+  repository: {
+    type: 'git',
+    url: 'git+https://github.com/sleepyvani/defeat-icons.git',
+    directory: 'packages/defeat-icons-vue'
+  },
+  bugs: {
+    url: 'https://github.com/sleepyvani/defeat-icons/issues'
+  },
   sideEffects: false,
   peerDependencies: {
     vue: '>=3.0.0'
@@ -171,7 +187,15 @@ const sveltePackageJson = {
     'defeat-icons'
   ],
   author: 'vanixjnk',
-  homepage: 'https://nucleoapp.com',
+  homepage: 'https://defeat-icons.vercel.app/',
+  repository: {
+    type: 'git',
+    url: 'git+https://github.com/sleepyvani/defeat-icons.git',
+    directory: 'packages/defeat-icons-svelte'
+  },
+  bugs: {
+    url: 'https://github.com/sleepyvani/defeat-icons/issues'
+  },
   sideEffects: false,
   peerDependencies: {
     svelte: '>=3.0.0'
@@ -217,7 +241,15 @@ const solidPackageJson = {
     'defeat-icons'
   ],
   author: 'vanixjnk',
-  homepage: 'https://nucleoapp.com',
+  homepage: 'https://defeat-icons.vercel.app/',
+  repository: {
+    type: 'git',
+    url: 'git+https://github.com/sleepyvani/defeat-icons.git',
+    directory: 'packages/defeat-icons-solid'
+  },
+  bugs: {
+    url: 'https://github.com/sleepyvani/defeat-icons/issues'
+  },
   sideEffects: false,
   peerDependencies: {
     'solid-js': '>=1.0.0'
@@ -235,6 +267,10 @@ fs.writeFileSync(path.join(solidPkgDir, 'package.json'), JSON.stringify(solidPac
 const reactReadme = `# defeat-icons-react
 
 3,424 18px duo-fill SVG icon components for React with TypeScript support and tree-shaking.
+
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
 
 ## Installation
 
@@ -273,6 +309,10 @@ import Heart from 'defeat-icons-react/Heart';
 const vueReadme = `# defeat-icons-vue
 
 3,424 18px duo-fill SVG icon components for Vue 3 with TypeScript support and tree-shaking.
+
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
 
 ## Installation
 
@@ -316,6 +356,10 @@ const svelteReadme = `# defeat-icons-svelte
 
 3,424 18px duo-fill SVG icon components for Svelte with TypeScript support and tree-shaking.
 
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
+
 ## Installation
 
 \`\`\`bash
@@ -353,6 +397,10 @@ bun add defeat-icons-svelte
 const solidReadme = `# defeat-icons-solid
 
 3,424 18px duo-fill SVG icon components for SolidJS with TypeScript support and tree-shaking.
+
+## Documentation & Demo
+
+Interactive icon explorer: https://defeat-icons.vercel.app/
 
 ## Installation
 

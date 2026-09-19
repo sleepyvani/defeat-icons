@@ -74,8 +74,15 @@
     "nucleo",
     "ui"
   ],
-  "author": "Nucleo",
-  "homepage": "https://nucleoapp.com",
+  "author": "vanixjnk",
+  "homepage": "https://defeat-icons.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyvani/defeat-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepyvani/defeat-icons/issues"
+  },
   "sideEffects": false,
   "scripts": {
     "dev": "vite",

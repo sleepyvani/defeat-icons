@@ -41,7 +41,7 @@ export function Header() {
           nucleo
         </a>
         <a
-          href="https://github.com/vanixjnk/defeat-icons"
+          href="https://github.com/sleepyvani/defeat-icons"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Repository"
