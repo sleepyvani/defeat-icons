@@ -19,6 +19,19 @@ interface HeroProps {
   onCopy: (text: string, title: string, desc?: string) => void;
 }
 
+const FRAMEWORK_FILE_META: Record<FrameworkId, { file: string; lang: string }> = {
+  react: { file: 'App.tsx', lang: 'TSX' },
+  vue: { file: 'App.vue', lang: 'Vue' },
+  svelte: { file: 'App.svelte', lang: 'Svelte' },
+  solid: { file: 'App.tsx', lang: 'TSX' },
+  preact: { file: 'App.tsx', lang: 'TSX' },
+  astro: { file: 'index.astro', lang: 'Astro' },
+  angular: { file: 'app.component.ts', lang: 'Angular' },
+  elements: { file: 'index.html', lang: 'HTML' },
+  svg: { file: 'heart.svg', lang: 'SVG' },
+  font: { file: 'index.html', lang: 'HTML' },
+};
+
 export function Hero({
   packageManager,
   onSelectPackageManager,
@@ -178,59 +191,70 @@ export function Hero({
       </p>
 
       <div className="mt-10 flex flex-col gap-8 sm:mt-14 sm:flex-row sm:gap-10 lg:gap-14">
-        <div className="flex flex-1 flex-col overflow-hidden rounded-2xl border border-dashed border-zinc-300 bg-white shadow-xs">
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-zinc-100/75 px-3 py-2">
-            <div className="flex items-center gap-1 rounded-lg bg-zinc-200/70 p-1">
-              {PACKAGE_MANAGERS.map((pm) => {
-                const active = packageManager === pm.id;
-                const Icon = pm.Icon;
-                return (
-                  <button
-                    key={pm.id}
-                    type="button"
-                    onClick={() => onSelectPackageManager(pm.id)}
-                    className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold transition-all ${
-                      active
-                        ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
-                        : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
-                    }`}
-                  >
-                    <Icon size={14} className="shrink-0" />
-                    <span>{pm.name}</span>
-                  </button>
-                );
-              })}
+        <div className="flex flex-1 flex-col gap-3.5">
+          <div className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
+            <div className="flex items-center justify-between border-b border-zinc-200/80 bg-zinc-100/75 px-3.5 py-2">
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
+                  <span className="size-2.5 rounded-full bg-rose-400" />
+                  <span className="size-2.5 rounded-full bg-amber-400" />
+                  <span className="size-2.5 rounded-full bg-emerald-400" />
+                </div>
+                <span className="font-mono text-[11px] font-medium text-zinc-500">terminal</span>
+              </div>
+
+              <div className="flex items-center gap-0.5 rounded-lg bg-zinc-200/70 p-0.5">
+                {PACKAGE_MANAGERS.map((pm) => {
+                  const active = packageManager === pm.id;
+                  const Icon = pm.Icon;
+                  return (
+                    <button
+                      key={pm.id}
+                      type="button"
+                      onClick={() => onSelectPackageManager(pm.id)}
+                      className={`flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold transition-all ${
+                        active
+                          ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
+                          : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
+                      }`}
+                    >
+                      <Icon size={13} className="shrink-0" />
+                      <span>{pm.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            <button
-              type="button"
-              onClick={() =>
-                onCopy(
-                  currentInstallCmd,
-                  `${activePm.name} install command copied`,
-                  currentInstallCmd
-                )
-              }
-              title={`Copy: ${currentInstallCmd}`}
-              aria-label="Copy install command"
-              className="flex size-6 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
-            >
-              <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-              </svg>
-            </button>
+            <div className="flex items-center justify-between gap-3 bg-zinc-50/60 px-4 py-3">
+              <div className="flex items-center gap-2.5 overflow-x-auto font-mono text-xs sm:text-[13px] text-zinc-800">
+                <span className="select-none font-bold text-zinc-400">$</span>
+                <code className="whitespace-nowrap">{activePm.render(activeFramework.pkgPath)}</code>
+              </div>
+
+              <button
+                type="button"
+                onClick={() =>
+                  onCopy(
+                    currentInstallCmd,
+                    `${activePm.name} install command copied`,
+                    currentInstallCmd
+                  )
+                }
+                title={`Copy: ${currentInstallCmd}`}
+                aria-label="Copy install command"
+                className="flex size-6 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
+              >
+                <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div className="flex items-center justify-between border-b border-zinc-200 bg-zinc-50 px-4 py-3 font-mono text-xs sm:text-[13px] text-zinc-800">
-            <span className="flex items-center gap-2 overflow-x-auto">
-              <span className="select-none font-bold text-zinc-400">$</span>
-              <code>{activePm.render(activeFramework.pkgPath)}</code>
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-zinc-100/75 px-3 py-2">
-            <div className="flex flex-wrap items-center gap-1 rounded-lg bg-zinc-200/70 p-1">
+          <div className="flex flex-1 flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs">
+            <div className="flex items-center gap-1 overflow-x-auto border-b border-zinc-200/80 bg-zinc-100/75 p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {FRAMEWORKS.map((fw) => {
                 const active = fw.id === selectedFramework;
                 const FwIcon = fw.IconComponent;
@@ -239,7 +263,7 @@ export function Hero({
                     key={fw.id}
                     type="button"
                     onClick={() => onSelectFramework(fw.id)}
-                    className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold transition-all ${
+                    className={`flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
                       active
                         ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
                         : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
@@ -252,34 +276,45 @@ export function Hero({
               })}
             </div>
 
-            <button
-              type="button"
-              onClick={() =>
-                onCopy(
-                  activeFramework.snippet,
-                  `${activeFramework.name} code copied`,
-                  `${activeFramework.name} code example ready to paste`
-                )
-              }
-              title={`Copy ${activeFramework.name} code`}
-              aria-label={`Copy ${activeFramework.name} code`}
-              className="flex size-6 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
-            >
-              <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed bg-zinc-50 border-t border-zinc-200">
-            <div className="flex">
-              <div className="select-none pr-3.5 text-right font-mono text-[13px] text-zinc-400 border-r border-zinc-200 flex flex-col">
-                {Array.from({ length: activeFramework.lineCount }).map((_, i) => (
-                  <span key={i}>{i + 1}</span>
-                ))}
+            <div className="flex items-center justify-between border-b border-zinc-200/60 bg-zinc-50/60 px-4 py-2">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-xs font-medium text-zinc-700">
+                  {FRAMEWORK_FILE_META[selectedFramework].file}
+                </span>
+                <span className="rounded bg-zinc-200/70 px-1.5 py-0.5 font-mono text-[10px] font-medium text-zinc-500">
+                  {FRAMEWORK_FILE_META[selectedFramework].lang}
+                </span>
               </div>
-              {activeFramework.renderCode()}
+
+              <button
+                type="button"
+                onClick={() =>
+                  onCopy(
+                    activeFramework.snippet,
+                    `${activeFramework.name} code copied`,
+                    `${activeFramework.name} code example ready to paste`
+                  )
+                }
+                title={`Copy ${activeFramework.name} code`}
+                aria-label={`Copy ${activeFramework.name} code`}
+                className="flex size-6 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
+              >
+                <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-x-auto p-4 font-mono text-[13px] leading-relaxed bg-zinc-50/30">
+              <div className="flex">
+                <div className="select-none pr-3.5 text-right font-mono text-[13px] text-zinc-400 border-r border-zinc-200/80 flex flex-col">
+                  {Array.from({ length: activeFramework.lineCount }).map((_, i) => (
+                    <span key={i}>{i + 1}</span>
+                  ))}
+                </div>
+                {activeFramework.renderCode()}
+              </div>
             </div>
           </div>
         </div>
@@ -296,7 +331,9 @@ export function Hero({
                 <strong>
                   {activeFramework.id === 'elements' || activeFramework.id === 'font'
                     ? 'Package import:'
-                    : 'Multi-framework imports:'}
+                    : activeFramework.id === 'svg'
+                      ? 'Asset import:'
+                      : 'Multi-framework imports:'}
                 </strong>{' '}
                 <code className="rounded border border-zinc-200 bg-zinc-100/90 px-1.5 py-0.5 font-mono text-xs">
                   {activeFramework.id === 'elements' ? (
@@ -308,6 +345,13 @@ export function Hero({
                     <>
                       <span className="text-purple-700 font-bold">import</span>
                       <span className="text-emerald-700 font-semibold"> 'defeat-icons-font/defeat-icons.css'</span>
+                    </>
+                  ) : activeFramework.id === 'svg' ? (
+                    <>
+                      <span className="text-purple-700 font-bold">import</span>
+                      <span className="text-blue-700 font-bold"> heart</span>
+                      <span className="text-purple-700 font-bold"> from</span>
+                      <span className="text-emerald-700 font-semibold"> 'defeat-icons-svg/heart.svg'</span>
                     </>
                   ) : activeFramework.id === 'angular' ? (
                     <>
