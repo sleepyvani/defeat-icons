@@ -211,9 +211,14 @@ export function Hero({
                   currentInstallCmd
                 )
               }
-              className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
+              title={`Copy: ${currentInstallCmd}`}
+              aria-label="Copy install command"
+              className="flex size-6 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
             >
-              Copy
+              <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
             </button>
           </div>
 
@@ -256,9 +261,14 @@ export function Hero({
                   `${activeFramework.name} code example ready to paste`
                 )
               }
-              className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
+              title={`Copy ${activeFramework.name} code`}
+              aria-label={`Copy ${activeFramework.name} code`}
+              className="flex size-6 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 shadow-xs hover:bg-gray-100 hover:text-zinc-900"
             >
-              Copy
+              <svg className="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
             </button>
           </div>
 
