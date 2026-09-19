@@ -113,7 +113,7 @@ export function IconModal({
             </div>
 
             <div className="mt-5 space-y-3">
-              <div className="flex items-center gap-1 rounded-lg bg-zinc-200/70 p-1">
+              <div className="grid grid-cols-4 gap-1 rounded-lg bg-zinc-200/70 p-1 sm:grid-cols-7">
                 {FRAMEWORKS.map((fw) => {
                   const active = fw.id === selectedFramework;
                   const FwIcon = fw.IconComponent;
@@ -122,14 +122,14 @@ export function IconModal({
                       key={fw.id}
                       type="button"
                       onClick={() => onSelectFramework(fw.id)}
-                      className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-1 text-xs font-semibold transition-all ${
+                      className={`flex items-center justify-center gap-1 rounded-md px-1.5 py-1 text-xs font-semibold transition-all ${
                         active
                           ? 'bg-white text-zinc-950 shadow-xs ring-1 ring-zinc-900/5'
                           : 'text-zinc-600 hover:bg-zinc-200/50 hover:text-zinc-950'
                       }`}
                     >
                       <FwIcon size={14} className="shrink-0" />
-                      <span>{fw.name}</span>
+                      <span className="truncate">{fw.name}</span>
                     </button>
                   );
                 })}
@@ -143,13 +143,17 @@ export function IconModal({
                   </span>
                   <button
                     type="button"
-                    onClick={() =>
+                    onClick={() => {
+                      const importName =
+                        activeFramework.id === 'angular'
+                          ? `DefeatIcon${selectedIcon}`
+                          : selectedIcon;
                       onCopy(
-                        `import { ${selectedIcon} } from '${activeFramework.pkgPath}';`,
+                        `import { ${importName} } from '${activeFramework.pkgPath}';`,
                         'Copied named import',
-                        `import { ${selectedIcon} } from '${activeFramework.pkgPath}'`
-                      )
-                    }
+                        `import { ${importName} } from '${activeFramework.pkgPath}'`
+                      );
+                    }}
                     className="rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:border-zinc-500 hover:text-zinc-950"
                   >
                     Copy
@@ -159,7 +163,11 @@ export function IconModal({
                   <code>
                     <span className="text-purple-700 font-bold">import</span>
                     <span className="text-zinc-600 font-medium"> {'{ '}</span>
-                    <span className="text-blue-700 font-bold">{selectedIcon}</span>
+                    <span className="text-blue-700 font-bold">
+                      {activeFramework.id === 'angular'
+                        ? `DefeatIcon${selectedIcon}`
+                        : selectedIcon}
+                    </span>
                     <span className="text-zinc-600 font-medium">{' }'} </span>
                     <span className="text-purple-700 font-bold">from</span>
                     <span className="text-emerald-700 font-semibold"> '{activeFramework.pkgPath}'</span>
@@ -177,9 +185,18 @@ export function IconModal({
                   <button
                     type="button"
                     onClick={() => {
+                      const isAngular = activeFramework.id === 'angular';
+                      const angularTag = selectedIcon
+                        ? 'df-icon-' +
+                          selectedIcon
+                            .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+                            .toLowerCase()
+                        : '';
                       const isClass = activeFramework.id !== 'react';
                       const attr = isClass ? 'class' : 'className';
-                      const usageCode = selectedTheme.colorClass
+                      const usageCode = isAngular
+                        ? `<${angularTag} class="size-6"></${angularTag}>`
+                        : selectedTheme.colorClass
                         ? `<${selectedIcon} ${attr}="size-6 ${selectedTheme.colorClass}" />`
                         : `<${selectedIcon} ${attr}="size-6" />`;
                       onCopy(usageCode, `${activeFramework.name} snippet copied`, usageCode);
@@ -190,18 +207,45 @@ export function IconModal({
                   </button>
                 </div>
                 <div className="mt-1.5 rounded-lg border border-zinc-200 bg-zinc-50 p-2.5 font-mono text-xs text-zinc-900">
-                  <code>
-                    <span className="text-zinc-600 font-medium">&lt;</span>
-                    <span className="text-blue-700 font-bold">{selectedIcon}</span>{' '}
-                    <span className="text-amber-700 font-semibold">
-                      {activeFramework.id === 'react' ? 'className' : 'class'}
-                    </span>
-                    <span className="text-zinc-600 font-medium">=</span>
-                    <span className="text-emerald-700 font-semibold">
-                      {selectedTheme.colorClass ? `"size-6 ${selectedTheme.colorClass}"` : '"size-6"'}
-                    </span>
-                    <span className="text-zinc-600 font-medium"> /&gt;</span>
-                  </code>
+                  {activeFramework.id === 'angular' ? (
+                    <code>
+                      <span className="text-zinc-600 font-medium">&lt;</span>
+                      <span className="text-blue-700 font-bold">
+                        df-icon-
+                        {selectedIcon
+                          ? selectedIcon
+                              .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+                              .toLowerCase()
+                          : ''}
+                      </span>{' '}
+                      <span className="text-amber-700 font-semibold">class</span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">"size-6"</span>
+                      <span className="text-zinc-600 font-medium">&gt;&lt;/</span>
+                      <span className="text-blue-700 font-bold">
+                        df-icon-
+                        {selectedIcon
+                          ? selectedIcon
+                              .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+                              .toLowerCase()
+                          : ''}
+                      </span>
+                      <span className="text-zinc-600 font-medium">&gt;</span>
+                    </code>
+                  ) : (
+                    <code>
+                      <span className="text-zinc-600 font-medium">&lt;</span>
+                      <span className="text-blue-700 font-bold">{selectedIcon}</span>{' '}
+                      <span className="text-amber-700 font-semibold">
+                        {activeFramework.id === 'react' ? 'className' : 'class'}
+                      </span>
+                      <span className="text-zinc-600 font-medium">=</span>
+                      <span className="text-emerald-700 font-semibold">
+                        {selectedTheme.colorClass ? `"size-6 ${selectedTheme.colorClass}"` : '"size-6"'}
+                      </span>
+                      <span className="text-zinc-600 font-medium"> /&gt;</span>
+                    </code>
+                  )}
                 </div>
               </div>
             </div>

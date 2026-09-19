@@ -225,7 +225,7 @@ export function Hero({
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-zinc-100/75 px-3 py-2">
-            <div className="flex items-center gap-1 rounded-lg bg-zinc-200/70 p-1">
+            <div className="flex flex-wrap items-center gap-1 rounded-lg bg-zinc-200/70 p-1">
               {FRAMEWORKS.map((fw) => {
                 const active = fw.id === selectedFramework;
                 const FwIcon = fw.IconComponent;

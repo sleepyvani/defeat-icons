@@ -29,7 +29,7 @@ export interface PackageManagerOption {
   render: (pkgName?: string) => React.ReactNode;
 }
 
-export type FrameworkId = 'react' | 'vue' | 'svelte' | 'solid';
+export type FrameworkId = 'react' | 'vue' | 'svelte' | 'solid' | 'preact' | 'astro' | 'angular';
 
 export interface FrameworkOption {
   id: FrameworkId;
