@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const RectLayoutGrid = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "M13.75 2H4.25C2.73122 2 1.5 3.23122 1.5 4.75V13.25C1.5 14.7688 2.73122 16 4.25 16H13.75C15.2688 16 16.5 14.7688 16.5 13.25V4.75C16.5 3.23122 15.2688 2 13.75 2Z", fill: "currentColor", fillOpacity: "0.4", "data-color": "color-2" }),
+        React.createElement("path", { d: "M6.00012 2H7.50013V5.5H16.5V7H7.50013V11H16.5V12.5H7.50013V16H6.00012V2Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=RectLayoutGrid.js.map
+export default RectLayoutGrid;

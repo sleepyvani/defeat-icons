@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+
+const iconNode = [["path",{"d":"m9,11.5c1.3807,0,2.5-1.1193,2.5-2.5s-1.1193-2.5-2.5-2.5-2.5,1.1193-2.5,2.5,1.1193,2.5,2.5,2.5Z","fill":"currentColor","opacity":".4","strokeWidth":"0","data-color":"color-2"}],["circle",{"cx":"9","cy":"3","r":"2","strokeWidth":"0","fill":"currentColor"}],["circle",{"cx":"3.8038","cy":"6","r":"2","opacity":".2","strokeWidth":"0","fill":"currentColor"}],["circle",{"cx":"3.8038","cy":"12","r":"2","opacity":".36","strokeWidth":"0","fill":"currentColor"}],["circle",{"cx":"9","cy":"15","r":"2","opacity":".52","strokeWidth":"0","fill":"currentColor"}],["circle",{"cx":"14.1962","cy":"12","r":"2","opacity":".68","strokeWidth":"0","fill":"currentColor"}],["circle",{"cx":"14.1962","cy":"6","r":"2","opacity":".84","strokeWidth":"0","fill":"currentColor"}]];
+
+export const Loader3 = (props) => React.createElement(Icon, { iconNode, ...props });
+export default Loader3;

@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+
+const iconNode = [["path",{"fillRule":"evenodd","clipRule":"evenodd","d":"M2 4.75C2 3.23128 3.23069 2 4.75 2H13.25C14.7693 2 16 3.23128 16 4.75V13.25C16 14.7687 14.7693 16 13.25 16H4.75C3.23069 16 2 14.7687 2 13.25V4.75Z","fill":"currentColor","fillOpacity":"0.4","data-color":"color-2"}],["path",{"d":"M11 8C11.552 8 12 7.5523 12 7C12 6.4477 11.552 6 11 6C10.448 6 10 6.4477 10 7C10 7.5523 10.448 8 11 8Z","fill":"currentColor"}],["path",{"d":"M7 8C7.552 8 8 7.5523 8 7C8 6.4477 7.552 6 7 6C6.448 6 6 6.4477 6 7C6 7.5523 6.448 8 7 8Z","fill":"currentColor"}],["path",{"d":"M11 12C11.552 12 12 11.5523 12 11C12 10.4477 11.552 10 11 10C10.448 10 10 10.4477 10 11C10 11.5523 10.448 12 11 12Z","fill":"currentColor"}],["path",{"d":"M7 12C7.552 12 8 11.5523 8 11C8 10.4477 7.552 10 7 10C6.448 10 6 10.4477 6 11C6 11.5523 6.448 12 7 12Z","fill":"currentColor"}]];
+
+export const Dice4 = (props) => React.createElement(Icon, { iconNode, ...props });
+export default Dice4;

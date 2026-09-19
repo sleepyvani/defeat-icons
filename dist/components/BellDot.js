@@ -1,0 +1,10 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const BellDot = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m10.2,15h-2.399c-.151,0-.293.068-.388.185-.095.117-.132.271-.101.418.173.822.868,1.397,1.689,1.397s1.516-.575,1.689-1.397c.031-.147-.006-.301-.101-.418-.095-.117-.238-.185-.389-.185Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m15.75,12c-.6908,0-1.25-.5591-1.25-1.25v-4.25c0-.1709-.0103-.3394-.0256-.5061-.501.3162-1.0895.5061-1.7244.5061-1.792,0-3.25-1.458-3.25-3.25,0-.801.3023-1.5259.7845-2.0928-.4128-.0991-.8414-.1572-1.2845-.1572-3.0372,0-5.5,2.4629-5.5,5.5v4.25c0,.6909-.5592,1.25-1.25,1.25-.4142,0-.75.3359-.75.75s.3358.75.75.75h13.5c.4142,0,.75-.3359.75-.75s-.3358-.75-.75-.75Z", fill: "currentColor", fillRule: "evenodd", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("circle", { cx: "12.75", cy: "3.25", r: "1.75", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=BellDot.js.map
+export default BellDot;

@@ -1,0 +1,11 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const SortVertical = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m15.75,8.25h-5.5c-.4141,0-.75.3359-.75.75s.3359.75.75.75h5.5c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m10.25,6.5h5.5c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75h-5.5c-.4141,0-.75.3359-.75.75s.3359.75.75.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m14.25,11.5h-4c-.4141,0-.75.3359-.75.75s.3359.75.75.75h4c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m6.7197,5.7803c.1465.1465.3379.2197.5303.2197s.3838-.0732.5303-.2197c.293-.293.293-.7676,0-1.0605l-2.5-2.5c-.293-.293-.7676-.293-1.0605,0l-2.5,2.5c-.293.293-.293.7676,0,1.0605s.7676.293,1.0605,0l1.2197-1.2197v8.8789l-1.2197-1.2197c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l2.5,2.5c.1465.1465.3379.2197.5303.2197s.3838-.0732.5303-.2197l2.5-2.5c.293-.293.293-.7676,0-1.0605s-.7676-.293-1.0605,0l-1.2197,1.2197V4.5605l1.2197,1.2197Z", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=SortVertical.js.map
+export default SortVertical;

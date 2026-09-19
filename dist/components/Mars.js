@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Mars = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M2 10.5C2 7.46235 4.46283 5 7.5 5C10.5372 5 13 7.46235 13 10.5C13 13.5377 10.5372 16 7.5 16C4.46283 16 2 13.5377 2 10.5Z", fill: "currentColor", fillOpacity: "0.4", "data-color": "color-2" }),
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M11.25 2C10.8358 2 10.5 2.33579 10.5 2.75C10.5 3.16421 10.8358 3.5 11.25 3.5H13.4394L10.8226 6.11674C11.2225 6.42037 11.5796 6.77747 11.8833 7.1774L14.5 4.56068V6.75C14.5 7.16421 14.8358 7.5 15.25 7.5C15.6642 7.5 16 7.16421 16 6.75V2.75C16 2.33579 15.6642 2 15.25 2H11.25Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=Mars.js.map
+export default Mars;

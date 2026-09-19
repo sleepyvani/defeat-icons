@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M7 8.75C7 7.78379 7.78379 7 8.75 7H14.25C15.2162 7 16 7.78379 16 8.75V14.25C16 15.2162 15.2162 16 14.25 16H8.75C7.78379 16 7 15.2162 7 14.25V8.75Z","fill":"currentColor","fill-opacity":"0.4","data-color":"color-2"}],["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M2 3.75C2 2.78379 2.78379 2 3.75 2H9.25C10.2162 2 11 2.78379 11 3.75V9.25C11 10.2162 10.2162 11 9.25 11H3.75C2.78379 11 2 10.2162 2 9.25V3.75Z","fill":"currentColor"}]];
+
+export const ObjsUngroup = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+ObjsUngroup.props = ['size', 'width', 'height'];
+export default ObjsUngroup;

@@ -1,0 +1,5 @@
+import { SvelteComponent } from 'svelte';
+import { IconProps } from './Icon.d.ts';
+
+export default class Grid3x3 extends SvelteComponent<IconProps> {}
+export { Grid3x3 };

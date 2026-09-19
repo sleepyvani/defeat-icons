@@ -1,0 +1,45 @@
+{
+  "name": "defeat-icons-solid",
+  "version": "1.0.0",
+  "description": "3,424 18px duo-fill SVG icon components for SolidJS",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./*": {
+      "types": "./*.d.ts",
+      "import": "./*.js",
+      "default": "./*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "solid",
+    "solid-icons",
+    "solidjs",
+    "svg",
+    "icons",
+    "duo-fill",
+    "defeat-icons"
+  ],
+  "author": "vanixjnk",
+  "homepage": "https://nucleoapp.com",
+  "sideEffects": false,
+  "peerDependencies": {
+    "solid-js": ">=1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

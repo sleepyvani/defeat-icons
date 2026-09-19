@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const ChevronMinimizeDiagonal2 = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { opacity: "0.4", d: "M14.75 9.5H10.25C9.836 9.5 9.5 9.836 9.5 10.25V14.75C9.5 15.164 9.836 15.5 10.25 15.5C10.664 15.5 11 15.164 11 14.75V11H14.75C15.164 11 15.5 10.664 15.5 10.25C15.5 9.836 15.164 9.5 14.75 9.5Z", fill: "currentColor", "data-color": "color-2" }),
+        React.createElement("path", { d: "M7.75 2.5C7.336 2.5 7 2.836 7 3.25V7H3.25C2.836 7 2.5 7.336 2.5 7.75C2.5 8.164 2.836 8.5 3.25 8.5H7.75C8.164 8.5 8.5 8.164 8.5 7.75V3.25C8.5 2.836 8.164 2.5 7.75 2.5Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=ChevronMinimizeDiagonal2.js.map
+export default ChevronMinimizeDiagonal2;

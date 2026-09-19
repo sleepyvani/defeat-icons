@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"d":"M9 16C8.5859 16 8.25 15.6641 8.25 15.25V7.5H6.75C6.3359 7.5 6 7.1641 6 6.75C6 6.3359 6.3359 6 6.75 6H8.5C9.1895 6 9.75 6.5605 9.75 7.25V15.25C9.75 15.6641 9.4141 16 9 16Z","fill":"currentColor"}],["path",{"opacity":"0.4","d":"M9 2C8.449 2 8 2.449 8 3C8 3.551 8.449 4 9 4C9.551 4 10 3.551 10 3C10 2.449 9.551 2 9 2Z","fill":"currentColor","data-color":"color-2"}]];
+
+export const AlertInfo = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default AlertInfo;

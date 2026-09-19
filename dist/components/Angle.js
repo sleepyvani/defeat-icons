@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Angle = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "M2.75 8.25C6.61593 8.25 9.75 11.384 9.75 15.25H4.75C3.64543 15.25 2.75 14.3546 2.75 13.25V8.25Z", fill: "currentColor", fillOpacity: "0.4", "data-color": "color-2" }),
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M2.75 2C3.16421 2 3.5 2.33579 3.5 2.75V13.25C3.5 13.9408 4.05921 14.5 4.75 14.5H15.25C15.6642 14.5 16 14.8358 16 15.25C16 15.6642 15.6642 16 15.25 16H4.75C3.23079 16 2 14.7692 2 13.25V2.75C2 2.33579 2.33579 2 2.75 2Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=Angle.js.map
+export default Angle;

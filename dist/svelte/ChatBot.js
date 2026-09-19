@@ -1,0 +1,2 @@
+export { default } from './ChatBot.svelte';
+export { default as ChatBot } from './ChatBot.svelte';

@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Pinwheel = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m9.1406,9.75l1.5855,3.1708c.5757.2817,1.2146.4542,1.8989.4542,2.4126,0,4.375-1.9624,4.375-4.375,0-.4141-.3359-.75-.75-.75h-7.3906l-1.5855-3.1708c-.5757-.2817-1.2146-.4542-1.8989-.4542-2.4126,0-4.375,1.9624-4.375,4.375,0,.4141.3359.75.75.75h7.3906Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m9.75,8.8594l3.1708-1.5855c.2817-.5757.4542-1.2146.4542-1.8989,0-2.4126-1.9624-4.375-4.375-4.375-.4141,0-.75.3359-.75.75v7.3906l-3.1708,1.5855c-.2817.5757-.4542,1.2146-.4542,1.8989,0,2.4126,1.9624,4.375,4.375,4.375.4141,0,.75-.3359.75-.75v-7.3906Z", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=Pinwheel.js.map
+export default Pinwheel;

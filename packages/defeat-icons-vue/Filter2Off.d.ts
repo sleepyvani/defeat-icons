@@ -1,0 +1,5 @@
+import { DefineComponent } from 'vue';
+import { IconProps } from './Icon.js';
+
+export declare const Filter2Off: DefineComponent<IconProps>;
+export default Filter2Off;

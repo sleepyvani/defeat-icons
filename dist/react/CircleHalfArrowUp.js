@@ -1,0 +1,7 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+
+const iconNode = [["path",{"d":"m9.5303,5.2197c-.293-.293-.7676-.293-1.0605,0l-3.25,3.25c-.293.293-.293.7676,0,1.0605s.7676.293,1.0605,0l1.9697-1.9697v8.6895c0,.4141.3359.75.75.75s.75-.3359.75-.75V7.5605l1.9697,1.9697c.1465.1465.3379.2197.5303.2197s.3838-.0732.5303-.2197c.293-.293.293-.7676,0-1.0605l-3.25-3.25Z","strokeWidth":"0","fill":"currentColor"}],["path",{"d":"m9,1C4.5889,1,1,4.5889,1,9c0,.4141.3359.75.75.75s.75-.3359.75-.75c0-3.584,2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5c0,.4141.3359.75.75.75s.75-.3359.75-.75c0-4.4111-3.5889-8-8-8Z","fill":"currentColor","opacity":".4","strokeWidth":"0","data-color":"color-2"}]];
+
+export const CircleHalfArrowUp = (props) => React.createElement(Icon, { iconNode, ...props });
+export default CircleHalfArrowUp;

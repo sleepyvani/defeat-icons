@@ -1,0 +1,44 @@
+{
+  "name": "defeat-icons-vue",
+  "version": "1.0.0",
+  "description": "3,424 18px duo-fill SVG icon components for Vue 3",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./*": {
+      "types": "./*.d.ts",
+      "import": "./*.js",
+      "default": "./*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "vue",
+    "vue-icons",
+    "svg",
+    "icons",
+    "duo-fill",
+    "defeat-icons"
+  ],
+  "author": "vanixjnk",
+  "homepage": "https://nucleoapp.com",
+  "sideEffects": false,
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"d":"m10.6592,16.3408c-.8774-.877-.8774-2.3047,0-3.1816.4248-.4253.9897-.6592,1.5908-.6592.084,0,.1675.0044.25.0137v-.2637c0-1.2407,1.0093-2.25,2.25-2.25.7104,0,1.3373.3374,1.75.8533v-5.3533H1.5v8.25c0,1.5186,1.2307,2.75,2.75,2.75h6.5684l-.1592-.1592Z","fill":"currentColor","fill-rule":"evenodd","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m6.5,1.25c0-.4142-.3358-.75-.75-.75s-.75.3358-.75.75v1.25h-.75c-1.5192,0-2.75,1.2308-2.75,2.75v1.25h15v-1.25c0-1.5192-1.2308-2.75-2.75-2.75h-.75v-1.25c0-.4142-.3358-.75-.75-.75s-.75.3358-.75.75v1.25h-5v-1.25Z","fill-rule":"evenodd","stroke-width":"0","fill":"currentColor"}],["path",{"d":"m17.7803,14.2197c-.293-.293-.7676-.293-1.0605,0l-1.2197,1.2197v-3.1895c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v3.1895l-1.2197-1.2197c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l2.5,2.5c.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197l2.5-2.5c.293-.293.293-.7676,0-1.0605Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const CalendarDownload = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default CalendarDownload;

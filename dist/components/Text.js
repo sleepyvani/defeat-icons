@@ -1,0 +1,8 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Text = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.75 2C3.33579 2 3 2.33579 3 2.75C3 3.16421 3.33579 3.5 3.75 3.5H8.25V15.25C8.25 15.6642 8.58579 16 9 16C9.41421 16 9.75 15.6642 9.75 15.25V3.5H14.25C14.6642 3.5 15 3.16421 15 2.75C15 2.33579 14.6642 2 14.25 2H3.75Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=Text.js.map
+export default Text;

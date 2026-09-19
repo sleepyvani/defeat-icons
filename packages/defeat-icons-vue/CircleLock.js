@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M1 9C1 4.58169 4.58169 1 9 1C13.4183 1 17 4.58169 17 9C17 13.4183 13.4183 17 9 17C4.58169 17 1 13.4183 1 9Z","fill":"currentColor","fill-opacity":"0.4","data-color":"color-2"}],["path",{"fill-rule":"evenodd","clip-rule":"evenodd","d":"M8.99999 5.51558C7.75726 5.51558 6.75061 6.52272 6.75061 7.76496C6.75061 8.7443 7.37626 9.57752 8.25 9.88633V12.5156C8.25 12.9298 8.58579 13.2656 9 13.2656C9.41421 13.2656 9.75 12.9298 9.75 12.5156V9.88632C10.6237 9.57751 11.2494 8.74429 11.2494 7.76496C11.2494 6.52272 10.2427 5.51558 8.99999 5.51558Z","fill":"currentColor"}]];
+
+export const CircleLock = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+CircleLock.props = ['size', 'width', 'height'];
+export default CircleLock;

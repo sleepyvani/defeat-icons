@@ -1,0 +1,7 @@
+import { createComponent, mergeProps } from 'solid-js/web';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"d":"m16.6421,4.6108c-.2612-.1611-.5967-.146-.8423.0391l-3.3301,2.4976-2.8242-4.7788c-.2695-.457-1.0215-.457-1.291,0l-2.8242,4.7788-3.3301-2.4976c-.2466-.1851-.5806-.2007-.8423-.0391-.2622.1606-.3999.4653-.3467.7686l1.46,8.3447c.231,1.3188,1.3701,2.2759,2.709,2.2759h7.6396c1.3389,0,2.478-.957,2.709-2.2759l1.46-8.3447c.0532-.3032-.0845-.6079-.3467-.7686Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}]];
+
+export const Crown2 = (props) => createComponent(Icon, mergeProps(props, { iconNode }));
+export default Crown2;

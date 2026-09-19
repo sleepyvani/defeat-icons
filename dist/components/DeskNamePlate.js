@@ -1,0 +1,11 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const DeskNamePlate = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "M3.75 1.5C2.50726 1.5 1.5 2.50792 1.5 3.75V9.75C1.5 10.9921 2.50726 12 3.75 12H14.25C15.4927 12 16.5 10.9921 16.5 9.75V3.75C16.5 2.50792 15.4927 1.5 14.25 1.5H3.75Z", fill: "currentColor", fillOpacity: "0.4", "data-color": "color-2" }),
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M4.5 6.75C4.5 6.33579 4.83579 6 5.25 6H9C9.41421 6 9.75 6.33579 9.75 6.75C9.75 7.16421 9.41421 7.5 9 7.5H5.25C4.83579 7.5 4.5 7.16421 4.5 6.75Z", fill: "currentColor" }),
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M11.25 6.75C11.25 6.33579 11.5858 6 12 6H12.75C13.1642 6 13.5 6.33579 13.5 6.75C13.5 7.16421 13.1642 7.5 12.75 7.5H12C11.5858 7.5 11.25 7.16421 11.25 6.75Z", fill: "currentColor" }),
+        React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M9.75 12H8.25V15H5C4.58579 15 4.25 15.3358 4.25 15.75C4.25 16.1642 4.58579 16.5 5 16.5H9H13C13.4142 16.5 13.75 16.1642 13.75 15.75C13.75 15.3358 13.4142 15 13 15H9.75V12Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=DeskNamePlate.js.map
+export default DeskNamePlate;

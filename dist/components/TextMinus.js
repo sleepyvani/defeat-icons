@@ -1,0 +1,10 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const TextMinus = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m14,9c-2.2056,0-4,1.7944-4,4s1.7944,4,4,4,4-1.7944,4-4-1.7944-4-4-4Zm1.75,4.75h-3.5c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h3.5c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m13.25,1.5H4.75c-1.5166,0-2.75,1.2334-2.75,2.75v9.5c0,1.5166,1.2334,2.75,2.75,2.75h5.0107c-.787-.9517-1.2607-2.1714-1.2607-3.5,0-3.0327,2.4673-5.5,5.5-5.5.7061,0,1.3792.1387,2,.3821v-3.6321c0-1.5166-1.2334-2.75-2.75-2.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m7.5,10h-2.25c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h2.25c.4141,0,.75.3359.75.75s-.3359.75-.75.75Zm3.5-3h-5.75c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h5.75c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=TextMinus.js.map
+export default TextMinus;

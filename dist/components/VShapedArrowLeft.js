@@ -1,0 +1,8 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const VShapedArrowLeft = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "M10.922 2.13C10.578 1.896 10.112 1.986 9.87999 2.328L5.62999 8.57799C5.45699 8.83299 5.45699 9.16699 5.62999 9.42199L9.87999 15.672C10.026 15.885 10.261 16 10.501 16C10.646 16 10.793 15.958 10.922 15.87C11.265 15.637 11.354 15.171 11.12 14.828L7.157 8.99999L11.12 3.17199C11.353 2.82899 11.265 2.363 10.922 2.13Z", fill: "currentColor" })));
+};
+//# sourceMappingURL=VShapedArrowLeft.js.map
+export default VShapedArrowLeft;

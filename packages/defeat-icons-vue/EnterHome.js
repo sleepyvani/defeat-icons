@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"d":"m15.3086,5.353l-5.249-3.9897c-.623-.4746-1.4941-.4741-2.1182-.0005l-5.25,3.9897c-.4326.3286-.6914.8496-.6914,1.3936v7.5039c0,1.5166,1.2334,2.75,2.75,2.75h8.5c1.5166,0,2.75-1.2334,2.75-2.75v-7.5039c0-.5439-.2588-1.0649-.6914-1.3931Z","fill":"currentColor","opacity":".4","stroke-width":"0","data-color":"color-2"}],["path",{"d":"m10.2803,10.2197l-2.5-2.5c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l1.2197,1.2197H2c-.4141,0-.75.3359-.75.75s.3359.75.75.75h5.9395l-1.2197,1.2197c-.293.293-.293.7676,0,1.0605.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197l2.5-2.5c.293-.293.293-.7676,0-1.0605Z","stroke-width":"0","fill":"currentColor"}]];
+
+export const EnterHome = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+EnterHome.props = ['size', 'width', 'height'];
+export default EnterHome;

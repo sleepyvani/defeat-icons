@@ -1,0 +1,8 @@
+import { h } from 'vue';
+import Icon from './Icon.js';
+
+const iconNode = [["path",{"opacity":"0.4","d":"M14.2501 2H3.75009C2.23131 2 1.00009 3.23122 1.00009 4.75V13.25C1.00009 14.7688 2.23131 16 3.75009 16H14.2501C15.7689 16 17.0001 14.7688 17.0001 13.25V4.75C17.0001 3.23122 15.7689 2 14.2501 2Z","fill":"currentColor","data-color":"color-2"}],["path",{"d":"M4.75009 13C4.33599 13 4.00009 12.6641 4.00009 12.25V5.75C4.00009 5.3359 4.33599 5 4.75009 5C5.16419 5 5.50009 5.3359 5.50009 5.75V12.25C5.50009 12.6641 5.16419 13 4.75009 13Z","fill":"currentColor"}]];
+
+export const LayoutLeft = (props, context) => h(Icon, { ...props, iconNode }, context ? context.slots : undefined);
+LayoutLeft.props = ['size', 'width', 'height'];
+export default LayoutLeft;

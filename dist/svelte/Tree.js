@@ -1,0 +1,2 @@
+export { default } from './Tree.svelte';
+export { default as Tree } from './Tree.svelte';

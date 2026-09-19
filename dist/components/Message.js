@@ -1,0 +1,8 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Message = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "M3.75 1.5C2.23054 1.5 1 2.73203 1 4.25V11.25C1 12.768 2.23054 14 3.75 14H5V16.25C5 16.5383 5.16526 16.8011 5.42511 16.926C5.68496 17.0509 5.99339 17.0158 6.21852 16.8357L9.76309 14H14.25C15.7695 14 17 12.768 17 11.25V4.25C17 2.73203 15.7695 1.5 14.25 1.5H3.75Z", fill: "currentColor", fillOpacity: "0.4", "data-color": "color-2" })));
+};
+//# sourceMappingURL=Message.js.map
+export default Message;

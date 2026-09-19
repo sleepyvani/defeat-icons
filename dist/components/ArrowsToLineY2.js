@@ -1,0 +1,12 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const ArrowsToLineY2 = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m4.75,9.75h-2c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h2c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m10,9.75h-2c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h2c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m15.25,9.75h-2c-.4141,0-.75-.3359-.75-.75s.3359-.75.75-.75h2c.4141,0,.75.3359.75.75s-.3359.75-.75.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m11.5303,13.4697l-2-2c-.293-.293-.7676-.293-1.0605,0l-2,2c-.293.293-.293.7676,0,1.0605s.7676.293,1.0605,0l.7197-.7197v2.4395c0,.4141.3359.75.75.75s.75-.3359.75-.75v-2.4395l.7197.7197c.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197c.293-.293.293-.7676,0-1.0605Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m11.5303,3.4697c-.293-.293-.7676-.293-1.0605,0l-.7197.7197V1.75c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v2.4395l-.7197-.7197c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l2,2c.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197l2-2c.293-.293.293-.7676,0-1.0605Z", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=ArrowsToLineY2.js.map
+export default ArrowsToLineY2;

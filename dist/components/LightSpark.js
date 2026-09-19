@@ -1,0 +1,15 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const LightSpark = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m9,10.5c-.4141,0-.75.3359-.75.75v5c0,.4141.3359.75.75.75s.75-.3359.75-.75v-5c0-.4141-.3359-.75-.75-.75Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m9,1c-.4141,0-.75.3359-.75.75v5c0,.4141.3359.75.75.75s.75-.3359.75-.75V1.75c0-.4141-.3359-.75-.75-.75Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m6.75,8.25H1.75c-.4141,0-.75.3359-.75.75s.3359.75.75.75h5c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m16.25,8.25h-5c-.4141,0-.75.3359-.75.75s.3359.75.75.75h5c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z", strokeWidth: "0", fill: "currentColor" }),
+        React.createElement("path", { d: "m4.9697,6.0303c.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197c.293-.293.293-.7676,0-1.0605l-1.5-1.5c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l1.5,1.5Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m12.5,6.25c.1919,0,.3838-.0732.5303-.2197l1.5-1.5c.293-.293.293-.7676,0-1.0605s-.7676-.293-1.0605,0l-1.5,1.5c-.293.293-.293.7676,0,1.0605.1465.1465.3384.2197.5303.2197Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m13.0303,11.9697c-.293-.293-.7676-.293-1.0605,0s-.293.7676,0,1.0605l1.5,1.5c.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197c.293-.293.293-.7676,0-1.0605l-1.5-1.5Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m4.9697,11.9697l-1.5,1.5c-.293.293-.293.7676,0,1.0605.1465.1465.3384.2197.5303.2197s.3838-.0732.5303-.2197l1.5-1.5c.293-.293.293-.7676,0-1.0605s-.7676-.293-1.0605,0Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" })));
+};
+//# sourceMappingURL=LightSpark.js.map
+export default LightSpark;

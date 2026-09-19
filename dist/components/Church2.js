@@ -1,0 +1,9 @@
+import React from 'react';
+import { Icon } from './Icon.js';
+export const Church2 = ({ ...props }) => {
+    return (React.createElement(Icon, { size: "18px", ...props },
+        React.createElement("path", { d: "m13.25,17H4.75c-1.5166,0-2.75-1.2334-2.75-2.75v-7.5039c0-.543.2578-1.0635.6904-1.3926L7.9404,1.3628c.625-.4727,1.4961-.4746,2.1191.0005l5.25,3.9897c.4326.3296.6904.8501.6904,1.3931v7.5039c0,1.5166-1.2334,2.75-2.75,2.75Z", fill: "currentColor", opacity: ".4", strokeWidth: "0", "data-color": "color-2" }),
+        React.createElement("path", { d: "m11.75,8h-2v-2.25c0-.4141-.3359-.75-.75-.75s-.75.3359-.75.75v2.25h-2c-.4141,0-.75.3359-.75.75s.3359.75.75.75h2v6.75c0,.4141.3359.75.75.75s.75-.3359.75-.75v-6.75h2c.4141,0,.75-.3359.75-.75s-.3359-.75-.75-.75Z", strokeWidth: "0", fill: "currentColor" })));
+};
+//# sourceMappingURL=Church2.js.map
+export default Church2;

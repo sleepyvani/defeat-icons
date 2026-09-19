@@ -1,0 +1,51 @@
+{
+  "name": "defeat-icons-svelte",
+  "version": "1.0.0",
+  "description": "3,424 18px duo-fill SVG icon components for Svelte",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "svelte": "./index.js",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "svelte": "./index.js",
+      "default": "./index.js"
+    },
+    "./*.svelte": {
+      "types": "./*.d.ts",
+      "svelte": "./*.svelte",
+      "default": "./*.svelte"
+    },
+    "./*": {
+      "types": "./*.d.ts",
+      "svelte": "./*.svelte",
+      "default": "./*.svelte"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.svelte",
+    "*.d.ts",
+    "index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "svelte",
+    "svelte-icons",
+    "svg",
+    "icons",
+    "duo-fill",
+    "defeat-icons"
+  ],
+  "author": "vanixjnk",
+  "homepage": "https://nucleoapp.com",
+  "sideEffects": false,
+  "peerDependencies": {
+    "svelte": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
