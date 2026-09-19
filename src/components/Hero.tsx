@@ -306,7 +306,7 @@ export function Hero({
               </button>
             </div>
 
-            <div className="flex-1 min-w-0 overflow-x-auto p-4 font-mono text-[13px] leading-relaxed bg-zinc-50/30">
+            <div className="flex-1 min-w-0 overflow-x-auto px-4 font-mono text-[13px] leading-relaxed bg-zinc-50/30">
               <div className="flex">
                 <div className="select-none pr-3.5 text-right font-mono text-[13px] text-zinc-400 border-r border-zinc-200/80 flex flex-col shrink-0">
                   {Array.from({ length: activeFramework.lineCount }).map((_, i) => (
