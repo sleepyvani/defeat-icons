@@ -20,6 +20,8 @@ for (const dir of pkgDirs) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
+const pkgVersion = '1.0.1';
+
 function toSvgAttrs(attrs) {
   const map = {
     fillOpacity: 'fill-opacity',
@@ -40,7 +42,7 @@ function toSvgAttrs(attrs) {
 
 const reactPackageJson = {
   name: 'defeat-icons-react',
-  version: '1.0.0',
+  version: pkgVersion,
   description: '3,424 18px duo-fill SVG icon components for React',
   type: 'module',
   main: './index.js',
@@ -94,7 +96,7 @@ const reactPackageJson = {
 
 const vuePackageJson = {
   name: 'defeat-icons-vue',
-  version: '1.0.0',
+  version: pkgVersion,
   description: '3,424 18px duo-fill SVG icon components for Vue 3',
   type: 'module',
   main: './index.js',
@@ -147,7 +149,7 @@ const vuePackageJson = {
 
 const sveltePackageJson = {
   name: 'defeat-icons-svelte',
-  version: '1.0.0',
+  version: pkgVersion,
   description: '3,424 18px duo-fill SVG icon components for Svelte',
   type: 'module',
   main: './index.js',
@@ -207,7 +209,7 @@ const sveltePackageJson = {
 
 const solidPackageJson = {
   name: 'defeat-icons-solid',
-  version: '1.0.0',
+  version: pkgVersion,
   description: '3,424 18px duo-fill SVG icon components for SolidJS',
   type: 'module',
   main: './index.js',

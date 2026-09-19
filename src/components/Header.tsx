@@ -27,7 +27,7 @@ export function Header() {
           Defeat Icons
         </span>
         <span className="hidden rounded-md border border-zinc-200 bg-zinc-100 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-zinc-600 sm:inline-block">
-          v1.0.0
+          v1.0.1
         </span>
       </div>
 

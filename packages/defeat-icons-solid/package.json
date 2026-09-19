@@ -1,6 +1,6 @@
 {
   "name": "defeat-icons-solid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "3,424 18px duo-fill SVG icon components for SolidJS",
   "type": "module",
   "main": "./index.js",
