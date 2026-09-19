@@ -104,6 +104,7 @@
     "publish:web": "npm publish ./packages/defeat-icons-svg && npm publish ./packages/defeat-icons-preact && npm publish ./packages/defeat-icons-astro && npm publish ./packages/defeat-icons-elements && npm publish ./packages/defeat-icons-angular && npm publish ./packages/defeat-icons-font",
     "publish:all": "npm publish ./packages/defeat-icons-react && npm publish ./packages/defeat-icons-vue && npm publish ./packages/defeat-icons-svelte && npm publish ./packages/defeat-icons-solid",
     "clean:demo": "rimraf dist-demo",
+    "optimize:og": "node scripts/optimize-og.mjs",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -148,6 +149,7 @@
     "rollup": "^3.0.0",
     "rollup-plugin-filesize": "^10.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.0.0",
     "vite": "^8.3.0"
